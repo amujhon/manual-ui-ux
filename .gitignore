@@ -1,0 +1,46 @@
+
+# Manual UI/UX — GitHub Pages
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editores
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+*.tmp
+*.bak
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# JavaScript y pruebas
+node_modules/
+.npm/
+playwright-report/
+test-results/
+
+# Variables privadas
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# Archivos temporales
+.cache/
+.tmp/
+.temp/
+.coverage
+htmlcov/

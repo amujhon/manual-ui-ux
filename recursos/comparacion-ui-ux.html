@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Capítulo 01 · Comparación de experiencias UI/UX</title>
+  <style>
+    :root { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; line-height: 1.5; color: #162b46; background: #f3f6fb; }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    a { color: #0756aa; }
+    :focus-visible { outline: 3px solid #a55b07; outline-offset: 3px; }
+    .skip { position: absolute; left: 12px; top: -100px; padding: 10px; background: white; z-index: 2; }
+    .skip:focus { top: 12px; }
+    header { background: #112c51; color: #fff; padding: 32px max(20px, calc((100vw - 1080px)/2)); }
+    header p { color: #dce7f5; max-width: 750px; }
+    main { max-width: 1120px; padding: 28px 20px 70px; margin: 0 auto; }
+    h1 { font-size: clamp(1.65rem,4vw,2.4rem); line-height: 1.15; margin: 0; }
+    h2 { font-size: 1.2rem; margin: 0 0 10px; }
+    h3 { font-size: 1.08rem; }
+    p { margin: 8px 0 14px; }
+    .tag { font-size: .78rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+    .lead { margin-bottom: 24px; color: #38516b; }
+    .controls { background: #fff; border: 1px solid #c8d5e5; border-radius: 12px; padding: 18px; margin-bottom: 24px; }
+    label { display:block; font-weight: 700; margin-bottom: 8px; }
+    select { font: inherit; min-height: 44px; padding: 8px 14px; border: 1px solid #53687e; border-radius: 8px; width: min(100%,380px); background: white; color: #162b46; }
+    .grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; }
+    .panel { border: 1px solid #c8d5e5; background: white; padding: 20px; border-radius: 14px; min-width: 0; }
+    .bad .tag { color: #a53b32; }
+    .good .tag { color: #136843; }
+    .mock { background: #eef2f7; min-height: 330px; border-radius: 12px; border: 1px solid #d4dce7; overflow: hidden; margin: 16px 0; }
+    .mock-top { padding: 14px 18px; background: #fff; border-bottom: 1px solid #d4dce7; font-size: .85rem; font-weight: 700; }
+    .mock-body { padding: 20px; }
+    .crumb { color: #576477; font-size: .82rem; overflow-wrap: anywhere; }
+    .bad-box { background: white; padding: 24px 20px; margin: 24px 0; border-radius: 10px; border: 1px solid #d0d8e3; text-align: center; }
+    .bad-box .vague { font-weight: 600; font-size: 1.05rem; }
+    .decorative-button { display: inline-block; padding: 10px 32px; border-radius: 8px; background: #c4cfdf; font-weight: 700; }
+    .doc { background:white; border: 1px solid #c6d4e2; border-radius: 10px; padding: 20px; }
+    .doc h3 { margin: 0 0 4px; }
+    .doc .period { font-size: .92rem; color: #42546a; }
+    .status { font-weight: 700; display: inline-flex; background: #dff5e9; color: #105c3c; padding: 5px 10px; border-radius: 30px; margin: 8px 0 12px; }
+    .status.pending { background:#fff0ce; color:#744600; }
+    .status.error { background:#fee4e2; color:#8c261f; }
+    details { background: #f4f8ff; border: 1px solid #a9c9f0; border-radius:8px; padding: 12px; margin-top: 14px; }
+    summary { cursor: pointer; font-weight: 700; color:#124f95; }
+    details p { font-size: .92rem; margin: 12px 0 4px; }
+    .explain { font-size: .9rem; color: #36516c; }
+    .note { padding: 16px 18px; margin-top: 22px; border-left: 4px solid #28649c; background:#e6effb; }
+    .footer { margin-top: 22px; color: #435974; font-size: .88rem; }
+    @media(max-width:730px) { .grid { grid-template-columns: 1fr; } .mock { min-height: auto; } }
+  </style>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header>
+  <div class="tag">Manual UI/UX · Capítulo 01</div>
+  <h1>Una pantalla ordenada no garantiza una buena experiencia</h1>
+  <p>Comparación educativa entre una interfaz organizada desde nombres internos del sistema y una propuesta organizada desde la tarea de la persona. Datos y estados ficticios.</p>
+</header>
+<main id="contenido">
+  <p class="lead">El objetivo de la persona es <strong>consultar el estado de su constancia de matrícula 2026–2027</strong>. Compara la claridad de cada propuesta. Esta demostración no consulta registros reales.</p>
+  <section class="controls" aria-labelledby="options-title">
+    <h2 id="options-title">Explorar un estado del documento</h2>
+    <label for="document-state">Estado ficticio en la propuesta B</label>
+    <select id="document-state">
+      <option value="available">Disponible</option>
+      <option value="pending">Pendiente de emisión</option>
+      <option value="error">No se pudo consultar el estado</option>
+    </select>
+    <p class="explain">Cambia la selección para comprobar si los mensajes explican qué sucede y qué puede hacer la persona.</p>
+  </section>
+  <div class="grid">
+    <section class="panel bad" aria-labelledby="bad-title">
+      <div class="tag">Alternativa A · Ejemplo problemático</div>
+      <h2 id="bad-title">Estructura interna como navegación</h2>
+      <div class="mock">
+        <div class="mock-top">PORTAL / SERVICIOS</div>
+        <div class="mock-body">
+          <div class="crumb">Gestión &gt; Recursos &gt; Emisión</div>
+          <div class="bad-box">
+            <div class="vague">Proceso exitoso</div>
+            <p>No se identifica el documento ni qué operación terminó.</p>
+            <span class="decorative-button">Aceptar</span>
+          </div>
+        </div>
+      </div>
+      <p class="explain"><strong>Riesgos:</strong> etiquetas internas, resultado ambiguo y falta de orientación. El botón gris es una maqueta, no una acción funcional.</p>
+    </section>
+    <section class="panel good" aria-labelledby="good-title">
+      <div class="tag">Alternativa B · Hipótesis de mejora</div>
+      <h2 id="good-title">Información organizada por tarea</h2>
+      <div class="mock">
+        <div class="mock-top">MIS DOCUMENTOS</div>
+        <div class="mock-body">
+          <div class="doc">
+            <h3>Constancia de matrícula</h3>
+            <p class="period">Período lectivo 2026–2027</p>
+            <p><span class="status" id="state-badge">Disponible</span></p>
+            <p id="state-description" role="status" aria-live="polite">La constancia está lista para consultar en este ejemplo.</p>
+            <details id="demo-detail">
+              <summary id="action-label">Ver información de la constancia</summary>
+              <p id="detail-explanation">Demostración educativa: el documento es ficticio y no se ha generado, consultado ni descargado un archivo real.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+      <p class="explain"><strong>Posibles beneficios:</strong> nombre reconocible, período, estado claro y siguiente paso explícito. Debe comprobarse con usuarios reales.</p>
+    </section>
+  </div>
+  <div class="note"><strong>Conclusión didáctica:</strong> la opción B expresa mejor el objetivo de la tarea, pero no hay evidencia experimental en esta página que demuestre una mejora cuantitativa. La evaluación de UX requiere observar a las personas y comprobar la integridad de los resultados.</div>
+  <p class="footer">Ejemplo local y autónomo. Sin almacenamiento, sin API, sin telemetría y sin dependencias externas.</p>
+</main>
+<script>
+  const selector = document.querySelector('#document-state');
+  const badge = document.querySelector('#state-badge');
+  const description = document.querySelector('#state-description');
+  const action = document.querySelector('#action-label');
+  const details = document.querySelector('#demo-detail');
+  const explanation = document.querySelector('#detail-explanation');
+  const states = {
+    available: {title:'Disponible', description:'La constancia está lista para consultar en este ejemplo.',action:'Ver información de la constancia',style:'',explanation:'El documento es ficticio. Esta demostración no consulta ni descarga un archivo real.'},
+    pending: {title:'Pendiente de emisión',description:'La institución todavía no ha emitido este documento ficticio.',action:'¿Qué significa este estado?',style:'pending',explanation:'Pendiente significa que la institución todavía debe emitir el documento. La disponibilidad nunca debe inferirse sin consultar una fuente fiable.'},
+    error: {title:'Estado no disponible',description:'No se pudo consultar el estado. No significa que el documento no exista.',action:'Ver explicación del error',style:'error',explanation:'Un error de consulta impide conocer el estado actual; no significa que el documento no exista. En un producto real se debe permitir reintentar o acudir a un canal de ayuda.'}
+  };
+  selector.addEventListener('change', () => {
+    const current = states[selector.value];
+    badge.textContent = current.title;
+    badge.className = `status ${current.style}`;
+    description.textContent = current.description;
+    action.textContent = current.action;
+    explanation.textContent = current.explanation;
+    details.open = false;
+  });
+</script>
+</body>
+</html>

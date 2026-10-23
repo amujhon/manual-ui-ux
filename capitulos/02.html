@@ -1,0 +1,668 @@
+<!doctype html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Manual integral de UI/UX: fundamentos, investigación, estándares, componentes e implementación. Lectura en línea y PDF gratuitos."><meta name="theme-color" content="#f9f9f6"><title>Capítulo 02 — Manual UI/UX</title><link rel="stylesheet" href="../assets/styles.css"></head><body class="reader-page"><a class="skip-link" href="#contenido">Saltar al contenido</a><header class="topbar">
+<a class="brand" href="../index.html" aria-label="Manual UI/UX, ir al inicio"><span class="brand-icon"><svg viewBox="0 0 42 42" width="40" height="40" aria-hidden="true"><rect x="1" y="1" width="40" height="40" rx="12" fill="currentColor"/><path d="M12 11v20m0-20 10 10-10 10m10-10 9-10m-9 10 9 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="brand-text">manual<span class="brand-period">.</span><small>UI / UX</small></span></a>
+<nav class="top-links" aria-label="Navegación principal"><a href="../index.html#indice" >Capítulos</a><a href="../introduccion.html" >Presentación</a><a href="../index.html#recursos">Recursos</a></nav>
+<div class="top-actions"><span class="version-pill">EDICIÓN 0.3</span><button class="icon-button theme-toggle" type="button" aria-label="Alternar modo oscuro" title="Cambiar tema"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg></button><button class="icon-button mobile-menu" type="button" aria-expanded="false" aria-controls="reader-sidebar" aria-label="Abrir índice"><svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button></div>
+</header><div class="reading-progress" aria-hidden="true"><span id="reading-progress"></span></div>
+<div class="reader-shell"><aside class="reader-sidebar" id="reader-sidebar" aria-label="Capítulos del manual"><div class="sidebar-heading">CONTENIDO DEL MANUAL</div><a class="intro-nav " href="../introduccion.html">↗ Presentación y guía de lectura</a><div class="sidebar-scroll"><div class="nav-group"><p class="nav-group-label">PARTE I <span>· Fundamentos y métodos</span></p><a class="nav-chapter " href="../capitulos/01.html" ><span class="chapter-num">01</span><span>Introducción a UI, UX y HCI</span></a><a class="nav-chapter is-current" href="../capitulos/02.html" aria-current=page><span class="chapter-num">02</span><span>Investigación de usuarios y diseño centrado en las personas</span></a><a class="nav-chapter " href="../capitulos/03.html" ><span class="chapter-num">03</span><span>Objetivos, tareas, modelos mentales y arquitectura de información</span></a><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">04</span><span>Psicología cognitiva y leyes aplicadas al diseño</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">05</span><span>Heurísticas y principios de interacción</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">06</span><span>Fundamentos de accesibilidad y diseño inclusivo</span><span class="small-dot" aria-hidden="true"></span></div></div><div class="nav-group"><p class="nav-group-label">PARTE II <span>· Lenguaje visual</span></p><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">07</span><span>Composición, percepción y jerarquía visual</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">08</span><span>Tipografía y legibilidad</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">09</span><span>Color, contraste y sistemas de temas</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">10</span><span>Espaciado, cuadrículas y layouts</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">11</span><span>Iconografía, imágenes e identidad visual</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">12</span><span>UX Writing y diseño de contenido</span><span class="small-dot" aria-hidden="true"></span></div></div><div class="nav-group"><p class="nav-group-label">PARTE III <span>· Componentes e interacción</span></p><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">13</span><span>Design Systems y Design Tokens</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">14</span><span>Anatomía y comportamiento de componentes interactivos</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">15</span><span>Botones, enlaces y controles de acción</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">16</span><span>Inputs y entrada de texto</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">17</span><span>Controles de selección y elección</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">18</span><span>Inputs especializados y captura avanzada</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">19</span><span>Estados, feedback, errores y animación</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">20</span><span>Diálogos, popovers, tooltips y notificaciones</span><span class="small-dot" aria-hidden="true"></span></div></div><div class="nav-group"><p class="nav-group-label">PARTE IV <span>· Patrones y experiencias</span></p><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">21</span><span>Navegación y orientación</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">22</span><span>Validaciones y recuperación de errores</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">23</span><span>Diseño integral de formularios</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">24</span><span>Formularios multipaso y flujos complejos</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">25</span><span>Búsqueda, filtrado y ordenamiento</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">26</span><span>Listas, tablas y datos densos</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">27</span><span>Visualización de datos y dashboards</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">28</span><span>Autenticación, permisos y consentimiento</span><span class="small-dot" aria-hidden="true"></span></div></div><div class="nav-group"><p class="nav-group-label">PARTE V <span>· Calidad transversal</span></p><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">29</span><span>Diseño responsive y adaptive</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">30</span><span>Convenciones de Android, iOS, web y escritorio</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">31</span><span>Accesibilidad avanzada y tecnologías asistivas</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">32</span><span>Rendimiento percibido, resiliencia, confianza y ética</span><span class="small-dot" aria-hidden="true"></span></div></div><div class="nav-group"><p class="nav-group-label">PARTE VI <span>· Implementación y evaluación</span></p><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">33</span><span>Wireframes, prototipos e investigación evaluativa</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">34</span><span>Implementación de UI/UX en la web</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">35</span><span>Implementación de UI/UX con Flutter</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">36</span><span>Auditoría, métricas y evolución del diseño</span><span class="small-dot" aria-hidden="true"></span></div></div></div></aside>
+<main id="contenido" class="reader-main"><div class="reader-crumb"><a href="../index.html">Manual UI/UX</a><span aria-hidden="true">/</span><span>Capítulo 02</span></div><div class="article-header"><span class="eyebrow">CAPÍTULO 02 DE 36</span><div class="reader-title"><h1>Investigación de usuarios y diseño centrado en las personas</h1></div><div class="article-meta"><span>6,299 palabras</span><span class="meta-sep"></span><span>30 min de lectura aprox.</span><span class="meta-sep"></span><span>Publicado · v0.3</span></div><div class="chapter-tools"><a class="pill-action" href="../pdf/capitulo-02.pdf" download><span aria-hidden="true">↓</span> PDF</a><a class="pill-action" href="../fuentes/capitulo-02.md" download>Markdown</a></div></div><div class="practical-panel"><div class="practical-icon">↗</div><div><strong>Laboratorio del capítulo 02</strong><p>Ejercicios de investigación y distinción entre hechos e hipótesis.</p><div class="practical-links"><a href="../recursos/c02_laboratorio.html">Abrir laboratorio ↗</a><a href="../recursos/plan_investigacion.md" download>Plan de investigación ↓</a><a href="../recursos/guion_entrevista.md" download>Guion de entrevista ↓</a></div></div></div><article class="prose" data-article><h1 class="chapter-heading" id="capitulo-02-investigacion-de-usuarios-y-diseno-centrado-en-las-personas">Capítulo 02. Investigación de usuarios y diseño centrado en las personas</h1>
+<p><strong>Parte I · Fundamentos científicos, conceptuales y metodológicos</strong><br/>
+<strong>Nivel:</strong> Fundamental–intermedio.<br/>
+<strong>Prerrequisito:</strong> Capítulo 01.<br/>
+<strong>Lecturas relacionadas:</strong> Capítulo 03 (tareas y arquitectura de información), 05 (heurísticas), 06 (accesibilidad), 21 (navegación), 23 (formularios), 33 (prototipado y pruebas) y 36 (métricas y auditoría).<br/>
+<strong>Resultados de aprendizaje:</strong> formular preguntas de investigación verificables; seleccionar métodos según la incertidumbre; reclutar participantes pertinentes; conducir entrevistas sin inducir respuestas; distinguir observación, interpretación e hipótesis; producir hallazgos trazables; proteger a los participantes; y transformar evidencia en decisiones de producto.</p>
+<blockquote>
+<p><strong>Idea rectora:</strong> investigar usuarios no es preguntarles qué interfaz les gustaría. Es obtener evidencia suficientemente fiable acerca de qué intentan lograr, cómo trabajan, qué les impide avanzar y bajo qué condiciones usan el sistema.</p>
+</blockquote>
+<h2 id="2-1-el-problema-de-disenar-a-partir-de-suposiciones">2.1. El problema de diseñar a partir de suposiciones</h2>
+<p>Una plataforma educativa recibe una petición: «Necesitamos un botón para que las familias descarguen los certificados más rápido». El equipo podría ejecutar la solicitud literalmente: agregar un botón visible en la página de inicio, asignarle un icono y considerarlo resuelto. Pero detrás de esa petición podrían existir problemas muy diferentes:</p>
+<ul>
+<li>El certificado existe, pero su ubicación no coincide con el vocabulario de las familias.</li>
+<li>La búsqueda funciona, pero se usa una cuenta equivocada cuando una persona representa a varios estudiantes.</li>
+<li>El certificado depende de una aprobación y la plataforma no comunica su estado.</li>
+<li>La descarga ocurre, pero algunos usuarios no saben dónde encontrar el archivo en su teléfono.</li>
+<li>El problema se manifiesta solo con conexiones inestables, tecnologías asistivas o dispositivos compartidos.</li>
+</ul>
+<p>Estas explicaciones son <strong>hipótesis, no hechos</strong>. Elegir cualquiera antes de investigar puede producir una interfaz vistosa que no elimina la causa del problema.</p>
+<p>La diferencia entre diseñar por intuición y diseñar con evidencia no significa prescindir de la experiencia profesional. Significa emplearla para formular mejores preguntas, proponer alternativas y decidir qué incertidumbres son suficientemente importantes como para investigarlas.</p>
+<div aria-label="Tabla desplazable horizontalmente" class="table-scroller" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th>Afirmación inicial</th>
+<th>¿Qué sabemos realmente?</th>
+<th>Pregunta investigable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>«Los representantes no entienden el módulo».</td>
+<td>Hay una percepción de dificultad, pero no conocemos la tarea ni la causa.</td>
+<td>¿En qué paso y ante qué información se detienen?</td>
+</tr>
+<tr>
+<td>«Hay que poner un botón más grande».</td>
+<td>Existe una solución propuesta, no un diagnóstico.</td>
+<td>¿Los participantes localizan la acción y pueden activarla?</td>
+</tr>
+<tr>
+<td>«Todos quieren recibirlo por WhatsApp».</td>
+<td>No consta la distribución de preferencias ni las restricciones de privacidad.</td>
+<td>¿Cómo reciben, almacenan y comparten hoy sus documentos?</td>
+</tr>
+<tr>
+<td>«El problema es que no saben usar tecnología».</td>
+<td>Es una atribución sobre las personas sin evidencia.</td>
+<td>¿Qué terminología, estados o decisiones de la interfaz provocan errores?</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>[CRITERIO EDITORIAL]</strong> Antes de implementar una solicitud de UI, registrar: problema declarado, evidencia disponible, supuestos, consecuencias de equivocarse y prueba mínima que permitiría tomar una decisión más informada.</p>
+<h2 id="2-2-diseno-centrado-en-las-personas-que-establece-iso-9241-210">2.2. Diseño centrado en las personas: qué establece ISO 9241-210</h2>
+<p><strong>ISO 9241-210:2019</strong> trata principios y actividades de diseño centrado en las personas a lo largo del ciclo de vida de los sistemas interactivos. Su ficha oficial describe requisitos y recomendaciones sobre el proceso, no reglas de color, tipografía ni composición de pantallas [C02-F01]. La norma es aplicable tanto a proyectos nuevos como a la evolución de productos existentes.</p>
+<p>En este manual sintetizamos el proceso operativo mediante cuatro actividades estrechamente relacionadas:</p>
+<ol>
+<li><strong>Comprender y especificar el contexto de uso.</strong> ¿Quién utilizará el producto?, ¿qué tareas realizará?, ¿con qué dispositivos, conocimientos, apoyos y restricciones?</li>
+<li><strong>Especificar requisitos centrados en las personas.</strong> ¿Qué resultados y condiciones debe permitir el sistema?, ¿qué barreras no son aceptables?</li>
+<li><strong>Producir soluciones de diseño.</strong> Explorar flujos, contenido, componentes y prototipos acordes con los requisitos.</li>
+<li><strong>Evaluar las soluciones frente a los requisitos.</strong> Observar si las personas pueden cumplir sus objetivos y actualizar lo que aún no sabemos.</li>
+</ol>
+<p>Las cuatro actividades se retroalimentan. Un prototipo puede revelar un requisito omitido; una sesión de observación puede mostrar que el público inicialmente definido era incompleto; una implementación puede obligar a revisar restricciones. Por ello el enfoque es <strong>iterativo</strong>, no una cascada rígida en la que la investigación termina antes de escribir código.</p>
+<div class="code-block"><button aria-label="Copiar fragmento de código" class="copy-code" type="button">Copiar código</button><pre><code class="language-mermaid">flowchart TB
+    A[Comprender el contexto de uso] --&gt; B[Definir necesidades y requisitos]
+    B --&gt; C[Proponer soluciones]
+    C --&gt; D[Evaluar con evidencia]
+    D --&gt;|Persisten incertidumbres| A
+    D --&gt;|Se identifican ajustes| C
+    D --&gt;|Criterios suficientes| E[Publicar y seguir aprendiendo]
+    E --&gt;|Cambian usuarios o contexto| A
+</code></pre></div>
+<p><strong>[NORMA / ALCANCE]</strong> La descripción anterior es una síntesis pedagógica del enfoque. No constituye una reproducción completa de ISO 9241-210 ni una certificación de conformidad. Para invocar cumplimiento formal, deben consultarse sus requisitos íntegros y la edición aplicable.</p>
+<h2 id="2-3-usuario-cliente-actor-y-parte-interesada-no-son-sinonimos">2.3. Usuario, cliente, actor y parte interesada no son sinónimos</h2>
+<p>En productos institucionales suele pagar una organización mientras otras personas realizan el trabajo. Los términos deben separarse:</p>
+<ul>
+<li><strong>Usuario directo:</strong> interactúa con la interfaz para cumplir una tarea. Ej.: un docente registra notas.</li>
+<li><strong>Usuario indirecto o afectado:</strong> recibe consecuencias del sistema aunque no ejecute esa operación. Ej.: un estudiante cuya calificación depende de lo registrado.</li>
+<li><strong>Cliente o comprador:</strong> contrata o financia el producto. Ej.: una institución.</li>
+<li><strong>Administrador y soporte:</strong> configuran, autorizan, corrigen o atienden incidentes; también son usuarios, con tareas propias.</li>
+<li><strong>Parte interesada (<em>stakeholder</em>):</strong> cualquier actor con intereses legítimos o responsabilidades relevantes, incluidas áreas legales y de seguridad.</li>
+</ul>
+<p>Escuchar solo al comprador deja fuera a quienes padecerán errores en el uso cotidiano. Escuchar únicamente a usuarios frecuentes puede dejar fuera a nuevos usuarios o personas que dejaron de utilizar el servicio.</p>
+<h3 id="unidad-de-analisis-persona-tarea-contexto">Unidad de análisis: persona + tarea + contexto</h3>
+<p>Un mismo ser humano puede comportarse de manera diferente según la tarea. Un representante que consulta tareas todos los días puede tener dificultades para completar una matrícula anual. Una docente experta puede dominar la carga de calificaciones, pero no un trámite administrativo poco frecuente.</p>
+<p>La unidad de estudio no debe ser «un usuario promedio» abstracto, sino el conjunto <strong>quién realiza qué, bajo qué condiciones y con qué consecuencias</strong>. El contexto incluye dispositivo, conectividad, entorno físico, idioma, experiencia previa, apoyos disponibles, presión de tiempo y riesgos de error.</p>
+<h2 id="2-4-que-preguntas-responde-cada-tipo-de-investigacion">2.4. Qué preguntas responde cada tipo de investigación</h2>
+<p>No basta con elegir entre «entrevista» o «encuesta». Las metodologías se diferencian por al menos tres ejes descritos por Nielsen Norman Group: <strong>actitud frente a conducta</strong>, <strong>cualitativo frente a cuantitativo</strong> y <strong>contexto de la interacción</strong> [C02-F02]. A esto conviene sumar el momento de decisión y el grado de madurez del producto.</p>
+<div aria-label="Tabla desplazable horizontalmente" class="table-scroller" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th>Dimensión</th>
+<th>Pregunta</th>
+<th>Ejemplos</th>
+<th>Precaución</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Actitudinal</td>
+<td>¿Qué piensa, recuerda o declara la persona?</td>
+<td>Entrevistas, encuestas.</td>
+<td>Las respuestas no sustituyen la conducta observada.</td>
+</tr>
+<tr>
+<td>Conductual</td>
+<td>¿Qué hace realmente?</td>
+<td>Observación, tareas de usabilidad, registros de eventos.</td>
+<td>La conducta requiere interpretación contextual.</td>
+</tr>
+<tr>
+<td>Cualitativa</td>
+<td>¿Cómo y por qué ocurre algo?</td>
+<td>Entrevistas abiertas, observación contextual.</td>
+<td>Una muestra pequeña no estima porcentajes poblacionales.</td>
+</tr>
+<tr>
+<td>Cuantitativa</td>
+<td>¿Con qué frecuencia o magnitud ocurre?</td>
+<td>Encuestas correctamente muestreadas, analítica y estudios de tareas con métricas.</td>
+<td>La selección y definición de métricas condicionan la validez.</td>
+</tr>
+<tr>
+<td>Generativa / descubrimiento</td>
+<td>¿Cuál es el problema o necesidad?</td>
+<td>Investigación contextual, entrevistas sobre experiencias pasadas.</td>
+<td>No confundir solicitudes de funciones con necesidades.</td>
+</tr>
+<tr>
+<td>Evaluativa</td>
+<td>¿Esta alternativa permite completar la tarea?</td>
+<td>Pruebas de usabilidad, experimentos.</td>
+<td>No evaluar solo satisfacción declarada.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Ejemplo:</strong> una entrevista puede revelar que una persona tiene miedo de «dañar» la matrícula si retrocede; una prueba de usabilidad puede mostrar que busca repetidamente un botón «Guardar borrador»; la analítica puede mostrar cuántas sesiones quedan incompletas. Son piezas complementarias, no respuestas intercambiables.</p>
+<h3 id="matriz-rapida-de-seleccion">Matriz rápida de selección</h3>
+<div aria-label="Tabla desplazable horizontalmente" class="table-scroller" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th>Incertidumbre principal</th>
+<th>Método prioritario</th>
+<th>Método complementario</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No comprendemos una necesidad</td>
+<td>Entrevistas sobre experiencias reales</td>
+<td>Observación de contexto</td>
+</tr>
+<tr>
+<td>No conocemos el proceso fuera de pantalla</td>
+<td>Observación contextual</td>
+<td>Diario de actividades</td>
+</tr>
+<tr>
+<td>No sabemos si encuentran una sección</td>
+<td><em>Tree testing</em> o prueba de tareas</td>
+<td>Entrevistas posteriores</td>
+</tr>
+<tr>
+<td>Las personas no completan un formulario</td>
+<td>Prueba de usabilidad moderada</td>
+<td>Analítica de pasos y errores</td>
+</tr>
+<tr>
+<td>Queremos medir prevalencia en una población</td>
+<td>Encuesta con muestreo diseñado</td>
+<td>Análisis de sesgo/no respuesta</td>
+</tr>
+<tr>
+<td>Queremos comparar dos variantes</td>
+<td>Experimento controlado, si es viable</td>
+<td>Investigación cualitativa sobre el resultado</td>
+</tr>
+<tr>
+<td>Queremos evaluar accesibilidad real</td>
+<td>Pruebas con usuarios con discapacidad</td>
+<td>Evaluación WCAG por especialistas</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>No se debe diseñar la investigación comenzando por la técnica favorita del equipo.</strong> Primero se define la decisión a tomar y después se elige la evidencia necesaria.</p>
+<h2 id="2-5-formular-un-problema-una-hipotesis-y-una-pregunta-de-investigacion">2.5. Formular un problema, una hipótesis y una pregunta de investigación</h2>
+<p>Un problema bien enunciado se refiere a una situación observada o documentada, no a la ausencia de una función inventada:</p>
+<ul>
+<li><strong>Débil:</strong> «Hace falta agregar un botón de descarga».</li>
+<li><strong>Mejor:</strong> «Algunas familias no logran obtener una constancia sin solicitar ayuda».</li>
+<li><strong>Más preciso, si está sustentado:</strong> «En tickets de soporte de septiembre, varias solicitudes se refieren a la localización de la constancia; no sabemos si el origen es navegación, permisos o disponibilidad».</li>
+</ul>
+<p><strong>Problema ≠ hipótesis ≠ pregunta ≠ solución.</strong></p>
+<div aria-label="Tabla desplazable horizontalmente" class="table-scroller" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th>Elemento</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Observación inicial</td>
+<td>Se reciben consultas repetidas por la descarga de documentos.</td>
+</tr>
+<tr>
+<td>Hipótesis H1</td>
+<td>La etiqueta actual no coincide con el vocabulario del público.</td>
+</tr>
+<tr>
+<td>Hipótesis H2</td>
+<td>La operación depende de un estado de aprobación que no se comunica.</td>
+</tr>
+<tr>
+<td>Pregunta P1</td>
+<td>¿Qué palabras usan las familias para describir el documento?</td>
+</tr>
+<tr>
+<td>Pregunta P2</td>
+<td>¿Qué ocurre cuando intentan descargarlo y aún no está habilitado?</td>
+</tr>
+<tr>
+<td>Decisión posible</td>
+<td>Renombrar navegación, explicar estados o corregir la lógica de disponibilidad, según los hallazgos.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Un objetivo operativo sería: «Identificar las principales barreras que impiden a representantes obtener el documento correcto desde el teléfono y priorizar una solución verificable». Debe definirse también qué resultados llevarían a <strong>no cambiar la interfaz</strong>: por ejemplo, si la causa demostrada fuera un proceso institucional externo.</p>
+<h3 id="registro-de-supuestos">Registro de supuestos</h3>
+<p>Antes de investigar, conviene listar supuestos con su impacto y evidencia. No hay una puntuación universal obligatoria; una matriz sencilla puede considerar <em>incertidumbre</em>, <em>riesgo</em> y <em>coste de equivocarse</em>. Prioriza las afirmaciones que, de ser falsas, provocarían trabajo innecesario o consecuencias graves.</p>
+<h2 id="2-6-planificar-una-investigacion-pequena-pero-rigurosa">2.6. Planificar una investigación pequeña pero rigurosa</h2>
+<p>Según el Service Manual de GOV.UK, una ronda de investigación debería definir objetivos, supuestos, participantes, actividades, consentimientos, logística y tiempo para análisis [C02-F03]. El formato puede ocupar una sola página en proyectos pequeños.</p>
+<p><strong>Plan resumido — ejemplo ficticio</strong></p>
+<div aria-label="Tabla desplazable horizontalmente" class="table-scroller" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Decisión</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Problema</td>
+<td>Dificultad para obtener una constancia académica.</td>
+</tr>
+<tr>
+<td>Decisión pendiente</td>
+<td>Cambiar navegación, lenguaje, estados o procedimiento.</td>
+</tr>
+<tr>
+<td>Población</td>
+<td>Representantes que solicitan constancias; soporte como actor complementario.</td>
+</tr>
+<tr>
+<td>Segmentación</td>
+<td>Uso frecuente/ocasional; Android/iOS/web; distintos niveles de familiaridad.</td>
+</tr>
+<tr>
+<td>Métodos</td>
+<td>6 entrevistas exploratorias y 6 pruebas de tareas como punto de partida ajustable.</td>
+</tr>
+<tr>
+<td>Reclutamiento</td>
+<td>Diferentes instituciones y patrones de uso, sin limitarse a quienes ya reclamaron.</td>
+</tr>
+<tr>
+<td>Evidencia adicional</td>
+<td>Tipos de tickets anonimizados y eventos agregados disponibles.</td>
+</tr>
+<tr>
+<td>Riesgos</td>
+<td>Datos académicos, terceros visibles en pantalla, dispositivos compartidos.</td>
+</tr>
+<tr>
+<td>Protección</td>
+<td>Datos sintéticos; consentimiento específico; acceso limitado a notas.</td>
+</tr>
+<tr>
+<td>Resultados esperados</td>
+<td>Hallazgos trazables, alternativas priorizadas y plan de validación.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Los números son una decisión de planificación ilustrativa, no un tamaño muestral universal.</strong> Se revisan al observar diversidad, repetición de hallazgos, riesgos y necesidad de inferencia estadística.</p>
+<p>La plantilla editable se entrega en <code>plantillas/plan_investigacion.md</code>.</p>
+<h2 id="2-7-reclutamiento-y-muestreo-encontrar-a-las-personas-correctas">2.7. Reclutamiento y muestreo: encontrar a las personas correctas</h2>
+<p>Un estudio puede estar perfectamente moderado y, aun así, fallar si selecciona a personas que no representan los contextos pertinentes.</p>
+<h3 id="muestreo-intencional-para-descubrir-mecanismos">Muestreo intencional para descubrir mecanismos</h3>
+<p>En estudios cualitativos, es habitual reclutar según características relevantes para la pregunta: frecuencia de uso, tipo de tarea, acceso, experiencia, condiciones de discapacidad, casos exitosos y fallidos. No implica representatividad estadística; pretende abarcar variabilidad útil.</p>
+<p>En nuestro caso, una muestra formada únicamente por personal de soporte no describiría cómo interactúan familias nuevas. Una muestra formada solo por personas que completaron la descarga excluiría barreras que impidieron llegar al resultado.</p>
+<h3 id="encuestas-y-representatividad">Encuestas y representatividad</h3>
+<p>Un enlace de encuesta enviado únicamente dentro de la app llega principalmente a quienes pueden entrar, leen el aviso y deciden responder. Es probable que omita a personas sin acceso, con bajas competencias digitales o que abandonaron el producto. La OCDE advierte que los medios de contacto y la no respuesta generan sesgos de selección que no desaparecen automáticamente con muchas respuestas [C02-F04].</p>
+<p><strong>[EVIDENCIA]</strong> Una muestra grande obtenida por autoselección no adquiere representatividad solo por aumentar el número de respuestas.</p>
+<h3 id="cinco-participantes-son-suficientes">¿Cinco participantes son suficientes?</h3>
+<p>La recomendación popular de alrededor de cinco participantes se refiere a determinadas <strong>rondas de pruebas cualitativas de usabilidad orientadas a descubrir problemas</strong>, no a toda entrevista, encuesta, estudio de accesibilidad o prueba cuantitativa. Nielsen Norman Group enfatiza que la investigación para estimar métricas de población requiere muestras y diseño distintos [C02-F05].</p>
+<ul>
+<li>En un estudio <strong>exploratorio</strong>, se ajusta el reclutamiento a la diversidad de situaciones y a la aparición de nueva evidencia.</li>
+<li>Para <strong>comparar tasas o estimar porcentajes</strong>, se necesita un plan estadístico con margen de error, confianza, variación y selección apropiada.</li>
+<li>En <strong>accesibilidad</strong>, importa la diversidad de tecnologías asistivas y estrategias; una sola persona no representa a todas las demás [C02-F06].</li>
+</ul>
+<p>No se impondrá un «N mágico» válido para todos los casos.</p>
+<h2 id="2-8-entrevistas-descubrir-experiencias-sin-poner-respuestas-en-boca-del-participante">2.8. Entrevistas: descubrir experiencias sin poner respuestas en boca del participante</h2>
+<p>Una entrevista de investigación no es una demostración comercial, una reunión de requisitos ni una votación sobre pantallas. Nielsen Norman Group la caracteriza como un método para comprender experiencias, necesidades, valores y motivaciones de usuarios [C02-F07].</p>
+<h3 id="preguntas-utiles-y-preguntas-sesgadas">Preguntas útiles y preguntas sesgadas</h3>
+<div aria-label="Tabla desplazable horizontalmente" class="table-scroller" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th>Evitar</th>
+<th>Preferir</th>
+<th>Por qué</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>«¿Te gustaría un botón rápido para descargar?»</td>
+<td>«Cuéntame la última vez que necesitaste ese documento».</td>
+<td>Evita orientar hacia una solución.</td>
+</tr>
+<tr>
+<td>«¿Fue confuso nuestro sistema?»</td>
+<td>«¿Qué esperabas que ocurriera en ese punto?»</td>
+<td>Evita etiquetar la experiencia por adelantado.</td>
+</tr>
+<tr>
+<td>«¿No crees que tres pasos son demasiados?»</td>
+<td>«¿Cómo decidiste qué hacer después?»</td>
+<td>Busca conducta y razonamiento en vez de aprobación.</td>
+</tr>
+<tr>
+<td>«¿Siempre revisas las notificaciones?»</td>
+<td>«Piensa en la última notificación: ¿qué hiciste con ella?»</td>
+<td>Reduce generalizaciones y sesgo de recuerdo.</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="guion-recomendado">Guion recomendado</h3>
+<ol>
+<li><strong>Apertura:</strong> explicar propósito, duración, participación voluntaria, tratamiento de datos y eventual grabación; verificar consentimiento.</li>
+<li><strong>Contexto:</strong> «¿Con qué dispositivo acostumbras consultar información académica?».</li>
+<li><strong>Último episodio real:</strong> «¿Cuándo fue la última vez que necesitaste una constancia? ¿Cómo lo resolviste?».</li>
+<li><strong>Profundización:</strong> «¿Qué te hizo elegir esa opción?», «¿Qué sucedió después?», «¿Hubo alguna alternativa?».</li>
+<li><strong>Contraste:</strong> pedir que relate un episodio con resultado diferente, si existe.</li>
+<li><strong>Cierre:</strong> «¿Hay algo importante que no te pregunté?»; aclarar qué ocurrirá con los datos y recordar los mecanismos acordados para retirarse.</li>
+</ol>
+<p>El moderador debe escuchar, evitar completar frases, tolerar silencios e indagar hechos concretos. Si se presenta una interfaz y se observa su uso, debe distinguirse ese segmento como <strong>prueba de tareas</strong>, aunque ocurra en la misma sesión.</p>
+<h2 id="2-9-observacion-contextual-lo-que-una-entrevista-no-puede-revelar">2.9. Observación contextual: lo que una entrevista no puede revelar</h2>
+<p>Una persona puede afirmar que «descargar un certificado es fácil», pero durante la observación cambiar de aplicación, buscar en el correo, preguntar a un familiar y reenviarse el archivo. La observación contextual permite estudiar el flujo real, incluidos atajos, herramientas externas y restricciones del entorno [C02-F08].</p>
+<p><strong>Procedimiento sugerido:</strong> acordar una tarea cotidiana; obtener permisos; observar sin intervenir de forma innecesaria; anotar acciones y condiciones; preguntar al final por comportamientos que requieran explicación; distinguir hechos de inferencias.</p>
+<p><strong>Ejemplo de registro:</strong></p>
+<div aria-label="Tabla desplazable horizontalmente" class="table-scroller" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th>Momento</th>
+<th>Observación literal</th>
+<th>Interpretación provisional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10:04</td>
+<td>Participante abre «Comunicaciones».</td>
+<td>Esperaba encontrar el certificado allí.</td>
+</tr>
+<tr>
+<td>10:05</td>
+<td>Vuelve y entra a «Repositorio».</td>
+<td>La categorización podría ser ambigua.</td>
+</tr>
+<tr>
+<td>10:07</td>
+<td>Pregunta si el archivo llegará al correo.</td>
+<td>El destino o estado de entrega podría ser poco claro.</td>
+</tr>
+</tbody>
+</table></div>
+<p>El registro de observación no debe afirmar «no entiende» si solo se observó una navegación alternativa. <strong>La conducta es el dato; la explicación es una hipótesis que debe contrastarse.</strong></p>
+<h3 id="otras-tecnicas-de-descubrimiento">Otras técnicas de descubrimiento</h3>
+<ul>
+<li><strong>Estudios de diario:</strong> las personas registran episodios durante días o semanas; útiles para tareas poco frecuentes o distribuidas en el tiempo; sensibles a abandonos y memoria.</li>
+<li><strong>Análisis de soporte:</strong> agrupa problemas reportados; útil para detectar temas, pero no mide prevalencia entre quienes nunca contactan soporte.</li>
+<li><strong>Analítica de uso:</strong> aporta secuencias y eventos; sin contexto no revela por qué alguien se detuvo.</li>
+<li><strong>Talleres de co-diseño:</strong> producen ideas y lenguaje con participantes; no garantizan que la solución ideada funcione.</li>
+</ul>
+<h2 id="2-10-encuestas-medir-opiniones-y-caracteristicas-con-cuidado">2.10. Encuestas: medir opiniones y características con cuidado</h2>
+<p>Las encuestas sirven para describir respuestas de una población o muestra, comparar segmentos y detectar patrones actitudinales. No son una alternativa barata universal a entrevistas u observación.</p>
+<p><strong>Buenas prácticas:</strong> definir la población objetivo; reclutar por un procedimiento explícito; formular preguntas neutras y de una sola idea; ofrecer opciones exhaustivas cuando sea pertinente; no exigir datos sensibles innecesarios; evitar escalas inconsistentes; probar el cuestionario antes de publicarlo; reportar no respuestas y canal de distribución.</p>
+<p><strong>Mal planteada:</strong> «¿Qué tan rápida y fácil es nuestra excelente plataforma?» mezcla atributos y sugiere la respuesta. <strong>Mejor:</strong> «Durante la última ocasión en que buscaste un documento, ¿lograste encontrarlo?» con opciones definidas y una pregunta independiente para dificultades experimentadas.</p>
+<p>Si se usa una escala de 1 a 5, deben identificarse ambos extremos y mantener la dirección consistente. Una media numérica de una muestra de conveniencia puede resumir lo observado, pero no justifica inferir un promedio de toda la población.</p>
+<h3 id="ejemplo-de-encuesta-minima-sin-recoleccion-real">Ejemplo de encuesta mínima sin recolección real</h3>
+<ol>
+<li>¿Has intentado obtener una constancia en los últimos seis meses? (Sí / No / No recuerdo).</li>
+<li>Si lo intentaste, ¿cuál fue el resultado? (Obtuve el documento correcto / Otro documento / No pude obtenerlo / No recuerdo).</li>
+<li>¿Desde qué dispositivo realizaste el último intento? (Teléfono / Computadora / Tableta / Otro).</li>
+<li>¿Qué dificultad experimentaste? (Respuesta abierta, opcional).</li>
+</ol>
+<p>Este cuestionario es solo una plantilla de partida; antes de aplicarlo deben revisarse su validez, flujo condicional, accesibilidad y consentimiento. El archivo HTML de esta entrega <strong>no registra ni transmite respuestas de personas</strong>; es un laboratorio local para diseñar estudios.</p>
+<h2 id="2-11-de-datos-dispersos-a-hallazgos-defendibles">2.11. De datos dispersos a hallazgos defendibles</h2>
+<p>La investigación produce notas, episodios, frases, capturas, registros y estadísticas. El desafío no es acumularlos, sino convertirlos en interpretaciones que permitan tomar decisiones sin confundir certeza y posibilidad.</p>
+<p>El proceso descrito por GOV.UK recomienda extraer observaciones, agruparlas por temas, sintetizar hallazgos y decidir acciones; también sugiere analizar los resultados con varias personas del equipo para reducir sesgos individuales [C02-F09].</p>
+<p><strong>Cadena de trazabilidad:</strong></p>
+<div class="code-block"><button aria-label="Copiar fragmento de código" class="copy-code" type="button">Copiar código</button><pre><code class="language-mermaid">flowchart LR
+    D[Dato observado] --&gt; E[Evidencia verificable]
+    E --&gt; H[Hallazgo acotado]
+    H --&gt; I[Implicación de diseño]
+    I --&gt; P[Propuesta / hipótesis]
+    P --&gt; T[Prueba de validación]
+</code></pre></div>
+<h3 id="ejemplo-evidencia-frente-a-conclusion-apresurada">Ejemplo: evidencia frente a conclusión apresurada</h3>
+<p><strong>Dato ficticio:</strong> en una prueba de tareas, cuatro participantes buscaron inicialmente la constancia en «Mis documentos»; la sección real se llamaba «Servicios institucionales». Dos lograron encontrarla sin ayuda y dos necesitaron indicaciones.</p>
+<p><strong>Inferencia débil:</strong> «El 50 % de todos los representantes no sabe utilizar la plataforma».</p>
+<p><strong>Hallazgo defendible:</strong> «En esta prueba cualitativa, dos de cuatro participantes no localizaron la constancia sin ayuda. Los cuatro buscaron inicialmente en una sección con una etiqueta diferente; la estructura y el vocabulario son candidatos a revisión». La redacción conserva límites de muestra y contexto.</p>
+<p><strong>Hipótesis de mejora:</strong> utilizar un nombre reconocible para el documento y ubicarlo donde el público espera encontrarlo.</p>
+<p><strong>Cómo validarla:</strong> realizar una prueba comparativa de localización con participantes pertinentes y comprobar tasa de finalización, errores y rutas recorridas; diseñar un estudio cuantitativo si se requiere estimar impacto poblacional.</p>
+<h3 id="matriz-de-hallazgos">Matriz de hallazgos</h3>
+<div aria-label="Tabla desplazable horizontalmente" class="table-scroller" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Observación</th>
+<th>Fuentes</th>
+<th>Hallazgo</th>
+<th>Confianza</th>
+<th>Acción siguiente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H-01</td>
+<td>Se busca el documento en otras secciones.</td>
+<td>P-01, P-02, P-04</td>
+<td>Posible desajuste de vocabulario.</td>
+<td>Media; evidencia limitada.</td>
+<td>Probar alternativas de denominación.</td>
+</tr>
+<tr>
+<td>H-02</td>
+<td>Se interpreta «Procesado» como «Disponible».</td>
+<td>P-03 y soporte S-02</td>
+<td>Un estado podría comunicar disponibilidad erróneamente.</td>
+<td>Baja–media; pendiente de contraste.</td>
+<td>Revisar reglas y mensajes con equipo técnico.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Los IDs anteriores son datos inventados para demostrar trazabilidad. El nivel de confianza no es una probabilidad matemática; documenta calidad, diversidad y consistencia de las evidencias de forma cualitativa. Mantener una <strong>evidencia contradictoria</strong> es igualmente importante: si alguien encontró el documento sin dificultad, registrar qué experiencia o condición lo explica.</p>
+<h2 id="2-12-personas-segmentos-y-arquetipos-utiles-solo-si-proceden-de-datos">2.12. Personas, segmentos y arquetipos: útiles solo si proceden de datos</h2>
+<p>Una <em>persona</em> es una representación compuesta de un patrón de necesidades, comportamientos y contextos relevante para diseñar. No debe confundirse con una fotografía, una edad arbitraria y una biografía inventada.</p>
+<p><strong>Ejemplo didáctico, no una persona validada:</strong></p>
+<blockquote>
+<p><strong>Arquetipo provisional: representante con tareas esporádicas.</strong> Ingresa al sistema unas pocas veces por período para trámites específicos. Necesita reconocer rápidamente el documento correcto, distinguir si está disponible y obtener una confirmación inequívoca. Puede usar un dispositivo compartido y no recordar el camino utilizado meses atrás. <strong>Origen:</strong> hipótesis del equipo hasta contrastar con investigación.</p>
+</blockquote>
+<p>Una ficha de persona basada en evidencia debería documentar: patrón de tareas, objetivo principal, frecuencia, condiciones, dificultades, estrategias, fuentes, fecha, segmentos donde aplica y grado de confianza.</p>
+<p><strong>Errores frecuentes:</strong> inventar características demográficas irrelevantes; creer que una persona representa a «todas las madres» o «todos los docentes»; describir deseos sin ejemplos reales; fijar una persona que nunca se revisa; usar categorías estereotipadas de edad o discapacidad.</p>
+<p>El uso efectivo de personas también es un asunto de ingeniería de requisitos: un estudio de profesionales publicado en 2024 identificó diferencias de uso y desafíos al trasladar personas a procesos reales de desarrollo [C02-F10]. Por eso el artefacto solo merece mantenerse si ayuda a decidir.</p>
+<h2 id="2-13-jobs-to-be-done-entender-el-progreso-que-la-persona-busca">2.13. Jobs to Be Done: entender el progreso que la persona busca</h2>
+<p>El enfoque <strong>Jobs to Be Done (JTBD)</strong> pone el énfasis en el resultado que una persona intenta conseguir dentro de una situación. Puede complementar a las personas: estas ayudan a describir patrones de usuarios y contextos; JTBD ayuda a explicar la motivación de una tarea [C02-F11].</p>
+<p>Una formulación práctica es:</p>
+<blockquote>
+<p><strong>Cuando</strong> [contexto y situación], <strong>quiero</strong> [progreso o acción necesaria], <strong>para</strong> [resultado importante].</p>
+</blockquote>
+<p><strong>Ejemplo:</strong> «Cuando una institución me pide una constancia de matrícula para un trámite, quiero obtener un documento vigente y verificable desde mi teléfono, para presentarlo sin depender de atención presencial».</p>
+<p>Esta formulación es mejor que «quiero un botón azul», porque no presupone el mecanismo. Podría resolverse con una descarga, una vista de verificación o un envío seguro, dependiendo de requisitos y restricciones que aún deben comprobarse.</p>
+<p><strong>Precaución:</strong> JTBD no demuestra por sí solo qué solución funciona; necesita investigación y evaluación. Tampoco sustituye a la definición de actores, permisos o contextos de accesibilidad.</p>
+<h2 id="2-14-segmentacion-diferenciar-necesidades-sin-fragmentar-el-producto">2.14. Segmentación: diferenciar necesidades sin fragmentar el producto</h2>
+<p>Segmentar significa agrupar personas o situaciones por características <strong>relevantes para una decisión de diseño</strong>, no necesariamente por edad o cargo.</p>
+<p>Para una plataforma educativa, algunos ejes plausibles de segmentación son:</p>
+<ul>
+<li><strong>Frecuencia de uso:</strong> primera vez, uso ocasional, uso cotidiano.</li>
+<li><strong>Responsabilidad:</strong> consulta de información, captura de datos, aprobación, administración.</li>
+<li><strong>Complejidad:</strong> un estudiante o varios; una institución o múltiples entidades.</li>
+<li><strong>Condiciones de uso:</strong> móvil compartido, conexión intermitente, tecnologías asistivas.</li>
+<li><strong>Experiencia técnica:</strong> familiaridad con una tarea concreta, no «nivel digital» genérico.</li>
+</ul>
+<p>Una persona puede pertenecer simultáneamente a varios segmentos. El objetivo no es fabricar veinte versiones de la UI, sino identificar qué necesidades pueden compartirse y cuáles requieren adaptación.</p>
+<p><strong>Regla:</strong> no convertir segmentos derivados de una muestra cualitativa en proporciones poblacionales, ni inferir discapacidad, situación económica o capacidades a partir de estereotipos.</p>
+<h2 id="2-15-etica-consentimiento-y-proteccion-de-participantes">2.15. Ética, consentimiento y protección de participantes</h2>
+<p>La investigación con personas puede generar riesgos si se graban pantallas con datos de estudiantes, se publican citas reconocibles o se presiona a alguien a participar. El Service Manual de GOV.UK exige, para sus investigaciones, consentimiento informado y explica qué información debe comunicarse antes de participar [C02-F12]. Se toma como guía metodológica, no como sustitución de la legislación ecuatoriana ni de la evaluación jurídica del proyecto.</p>
+<h3 id="informacion-minima-a-comunicar">Información mínima a comunicar</h3>
+<ol>
+<li>Quién realiza la investigación y para qué.</li>
+<li>Qué actividad se realizará, su duración y qué datos se recogerán.</li>
+<li>Si habrá grabaciones, observadores o servicios externos de transcripción.</li>
+<li>Cómo se almacenará, utilizará, compartirá y eliminará la información.</li>
+<li>Que participar es voluntario y cómo detenerse o solicitar la retirada según las condiciones informadas y obligaciones aplicables.</li>
+<li>Un canal de contacto para dudas o derechos.</li>
+</ol>
+<p><strong>[CRITERIO EDITORIAL]</strong> La participación en investigación no debe condicionarse a recibir un servicio institucional ordinario; hay que prevenir relaciones de presión entre docentes, instituciones, estudiantes, familias y personal administrativo.</p>
+<h3 id="minimizacion-de-datos">Minimización de datos</h3>
+<p>Para estudiar si se encuentra un certificado, normalmente no hace falta recopilar números de cédula, calificaciones, diagnósticos, direcciones o documentos reales. Utiliza cuentas de prueba, datos sintéticos y escenarios ficticios. Separa información de contacto del contenido de la investigación. Evita enviar grabaciones o transcripciones identificables a servicios externos sin base y autorizaciones apropiadas. Define tiempos de conservación y responsabilidades.</p>
+<p>La orientación de GOV.UK sobre privacidad recomienda recopilar solo información necesaria y prestar especial atención a datos sensibles y datos relativos a menores [C02-F13].</p>
+<h3 id="investigacion-con-ninas-ninos-y-adolescentes">Investigación con niñas, niños y adolescentes</h3>
+<p>La investigación en entornos educativos puede involucrar menores de edad. En tales casos, los procedimientos deben adaptarse a edad, comprensión, consentimiento de representantes o responsables según el marco aplicable, asentimiento del menor y medidas de protección. El Department for Education del Reino Unido ofrece guías específicas sobre bienestar, salvaguardas y participación activa de niños y jóvenes [C02-F14].</p>
+<p>No asumiremos que el consentimiento de una institución sustituye automáticamente a todas las autorizaciones necesarias ni que los requisitos de otro país sean directamente exigibles en Ecuador. La regla operativa es realizar una revisión ética y jurídica local antes de estudiar a menores o tratar datos sensibles.</p>
+<h2 id="2-16-accesibilidad-de-la-propia-investigacion">2.16. Accesibilidad de la propia investigación</h2>
+<p>Una investigación excluyente produce conclusiones incompletas. Si las sesiones exigen necesariamente videollamada, teclado físico, visión normal o lectura rápida, es posible que queden fuera personas relevantes para el producto.</p>
+<p><strong>Preparaciones recomendadas:</strong> información y consentimiento en formatos accesibles; canales alternativos de comunicación; pausas; espacio físico accesible; tiempo suficiente; respeto por tecnologías asistivas; preguntas comprensibles; posibilidad de evitar grabaciones innecesarias; y reclutamiento de participantes con distintas estrategias de interacción.</p>
+<p>W3C WAI recomienda incluir personas con discapacidad durante todo el proyecto y recuerda que ninguna persona representa por sí sola a todo un grupo; además, las pruebas con usuarios <strong>complementan pero no reemplazan</strong> la evaluación de conformidad con WCAG [C02-F06].</p>
+<p>Ejemplo: si una persona que usa lector de pantalla no encuentra el botón, registrar la secuencia observada, plataforma, lector, dispositivo y contexto; no concluir inmediatamente que «todos los lectores fallan». El diagnóstico puede requerir inspeccionar orden de foco, semántica del control o comportamiento de la tecnología asistiva.</p>
+<h2 id="2-17-sesgos-y-amenazas-a-la-validez">2.17. Sesgos y amenazas a la validez</h2>
+<p><strong>Sesgo de confirmación:</strong> buscar evidencia que respalde la solución que el equipo ya eligió. <em>Control:</em> formular hipótesis alternativas y registrar resultados que las contradicen.</p>
+<p><strong>Sesgo de selección:</strong> estudiar solo a personas fáciles de reclutar o muy comprometidas con el producto. <em>Control:</em> considerar quién falta y por qué.</p>
+<p><strong>Sesgo de cortesía o deseabilidad social:</strong> participantes dicen que todo está bien ante quien desarrolló el sistema. <em>Control:</em> preguntas neutrales, moderadores que no defiendan el producto y observación real.</p>
+<p><strong>Sesgo de recuerdo:</strong> las personas reconstruyen incorrectamente episodios pasados. <em>Control:</em> solicitar episodios recientes y contrastar con registros apropiados.</p>
+<p><strong>Efecto de observación:</strong> saber que se está siendo observado puede cambiar la conducta. <em>Control:</em> explicar la sesión, permitir familiarización y considerar métodos en contexto real.</p>
+<p><strong>Confusión por variables externas:</strong> cambios de red, permisos, experiencia o datos pueden explicar una diferencia aparente entre interfaces. <em>Control:</em> documentar condiciones y, en experimentos, controlar factores relevantes.</p>
+<h3 id="cuatro-preguntas-de-control">Cuatro preguntas de control</h3>
+<ul>
+<li>¿Qué evidencia contradice nuestra interpretación?</li>
+<li>¿Qué grupos o situaciones no estudiamos?</li>
+<li>¿Una explicación alternativa encaja igual de bien con lo observado?</li>
+<li>¿Qué decisión cambiaríamos si este hallazgo resultara falso?</li>
+</ul>
+<p>Responder estas preguntas mejora el rigor incluso cuando el equipo tiene poco presupuesto.</p>
+<h2 id="2-18-caso-practico-integrado-investigar-la-descarga-de-una-constancia">2.18. Caso práctico integrado: investigar la descarga de una constancia</h2>
+<p><strong>Todos los datos de este caso son ficticios y solo tienen propósito educativo.</strong> No describen hallazgos reales de ningún producto.</p>
+<h3 id="paso-a-definir-incertidumbre">Paso A. Definir incertidumbre</h3>
+<p>El equipo observa solicitudes de soporte acerca de constancias. No conoce las causas. Plantea tres hipótesis: H1, terminología confusa; H2, estado del documento mal comunicado; H3, descarga terminada pero archivo difícil de localizar.</p>
+<h3 id="paso-b-planificar-y-reclutar">Paso B. Planificar y reclutar</h3>
+<p>Organiza entrevistas breves con representantes de uso esporádico y frecuente, incorpora distintas condiciones de dispositivo y accesibilidad, y prepara cuentas de prueba sin datos reales. Los criterios de inclusión se vinculan al objetivo de la tarea, no solo a disponibilidad.</p>
+<h3 id="paso-c-observar-tareas">Paso C. Observar tareas</h3>
+<p>Se propone un escenario neutral: «Necesitas presentar una constancia de matrícula vigente. Usando esta cuenta de prueba, intenta obtenerla». El moderador no dice qué menú contiene el archivo. Si la sesión permite preguntas, se registran por separado las indicaciones dadas.</p>
+<h3 id="paso-d-registrar-evidencias">Paso D. Registrar evidencias</h3>
+<div aria-label="Tabla desplazable horizontalmente" class="table-scroller" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th>Participante</th>
+<th>Evidencia sintética</th>
+<th>Hipótesis relacionada</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P-01</td>
+<td>Buscó primero en «Documentos».</td>
+<td>H1</td>
+</tr>
+<tr>
+<td>P-02</td>
+<td>Interpretó «Generado» como disponible para descarga.</td>
+<td>H2</td>
+</tr>
+<tr>
+<td>P-03</td>
+<td>Descargó el archivo, pero buscó un mensaje sobre dónde se guardó.</td>
+<td>H3</td>
+</tr>
+<tr>
+<td>P-04</td>
+<td>Encontró la acción sin ayuda.</td>
+<td>Evidencia contraria a una dificultad universal</td>
+</tr>
+</tbody>
+</table></div>
+<p>No se obtiene una «tasa de problemas del 75 %». Se identifican mecanismos plausibles para probar, porque cada fila describe situaciones diferentes y el número de observaciones es deliberadamente pequeño.</p>
+<h3 id="paso-e-decidir-intervenciones">Paso E. Decidir intervenciones</h3>
+<ul>
+<li><strong>Para H1:</strong> preparar denominaciones alternativas y probar su capacidad de localización antes de modificar toda la navegación.</li>
+<li><strong>Para H2:</strong> verificar primero las reglas reales del backend; después diferenciar «En proceso», «Disponible» y «No disponible» sin inventar estados.</li>
+<li><strong>Para H3:</strong> ofrecer un mensaje posterior consistente con el comportamiento de cada plataforma, evitando afirmar que el archivo está en una ruta desconocida.</li>
+</ul>
+<h3 id="paso-f-validar-y-documentar">Paso F. Validar y documentar</h3>
+<p>Realizar tareas con la variante revisada, registrar errores y ayuda requerida, comparar condiciones equivalentes y contrastar con las hipótesis originales. Si el cambio afecta documentos sensibles, incorporar revisión de autorizaciones y accesibilidad. Un hallazgo sin responsable, decisión ni prueba futura corre el riesgo de convertirse en una nota archivada.</p>
+<h2 id="2-19-codigo-aplicado-instrumentacion-de-eventos-sin-registrar-datos-sensibles">2.19. Código aplicado: instrumentación de eventos sin registrar datos sensibles</h2>
+<p>La investigación conductual puede apoyarse en telemetría limitada y autorizada. La siguiente estructura de ejemplo en <strong>Dart</strong> muestra cómo registrar eventos de tarea <strong>sin</strong> incluir nombres, cédulas, identificadores de estudiantes ni contenido del documento. La integración concreta con un proveedor de analítica debe respetar permisos, políticas de privacidad y configuración de consentimiento aplicable.</p>
+<div class="code-block"><button aria-label="Copiar fragmento de código" class="copy-code" type="button">Copiar código</button><pre><code class="language-dart">/// Ejemplo conceptual para una aplicación Flutter/Dart.
+/// No envía información a ningún servicio.
+enum ResultadoTarea { completada, fallida, abandonada }
+
+class EventoTarea {
+  final String nombreTarea; // Vocabulario cerrado, p. ej. 'descargar_constancia'
+  final ResultadoTarea resultado;
+  final int duracionMilisegundos;
+
+  const EventoTarea({
+    required this.nombreTarea,
+    required this.resultado,
+    required this.duracionMilisegundos,
+  });
+
+  Map&lt;String, Object&gt; toSafeMap() =&gt; {
+        'tarea': nombreTarea,
+        'resultado': resultado.name,
+        'duracion_ms': duracionMilisegundos,
+      };
+}
+
+void registrarLocalmente(EventoTarea evento, {required bool permitido}) {
+  if (!permitido) return;
+  // Un repositorio real aplicaría límites, controles de acceso y retención.
+  final registro = evento.toSafeMap();
+  assert(!registro.containsKey('cedula'));
+  // En este ejemplo, no se transmite ni persiste el registro.
+}
+</code></pre></div>
+<p>Este fragmento <strong>no constituye una implementación de producción</strong>: no cubre almacenamiento seguro, retención, agregación, concurrencia, obligaciones legales ni amenazas de reidentificación. Incluso un conjunto de eventos aparentemente anónimos puede volverse identificable al combinarse con otros datos. Además, los eventos solo dicen <em>qué ocurrió en el sistema instrumentado</em>, no necesariamente <em>qué experimentó la persona</em>.</p>
+<p>El paquete incluye <code>ejemplos/c02_analisis.py</code>, un ejercicio reproducible con CSV sintético que separa eventos observados de inferencias y calcula únicamente medidas descriptivas del conjunto de práctica. El capítulo 36 estudiará diseño formal de métricas, intervalos de confianza y pruebas cuantitativas.</p>
+<h2 id="2-20-laboratorio-visual-distinguir-hechos-interpretaciones-y-decisiones">2.20. Laboratorio visual: distinguir hechos, interpretaciones y decisiones</h2>
+<p>La demostración <code>ejemplos/c02_laboratorio.html</code> presenta una pequeña investigación simulada con cuatro momentos:</p>
+<ol>
+<li><strong>Pregunta:</strong> elegir qué se necesita aprender antes de elegir una técnica.</li>
+<li><strong>Evidencia:</strong> revisar registros observacionales ficticios.</li>
+<li><strong>Interpretación:</strong> diferenciar una conclusión exagerada de un hallazgo limitado a la muestra.</li>
+<li><strong>Acción:</strong> decidir qué hipótesis de diseño probar sin presentarla como confirmada.</li>
+</ol>
+<p>El laboratorio funciona localmente, sin servidor, almacenamiento ni transferencia de datos. Su valor está en practicar la distinción entre observar, explicar y decidir, no en simular resultados estadísticos válidos.</p>
+<h3 id="ejercicio-individual">Ejercicio individual</h3>
+<p>Lee el siguiente caso: «Tres usuarios abandonaron un formulario cuando apareció la sección de datos del representante». Escribe:</p>
+<ol>
+<li><strong>Dos explicaciones rivales</strong> que no atribuyan el problema a incapacidad de los participantes.</li>
+<li><strong>Un método</strong> para averiguar qué sucedió y por qué.</li>
+<li><strong>Una observación neutral</strong> que registrarías durante la sesión.</li>
+<li><strong>Una métrica</strong> que estudiarías después, distinguiendo su denominador y limitaciones.</li>
+<li><strong>Una decisión que todavía no tomarías</strong> por falta de evidencia.</li>
+</ol>
+<p>Una respuesta razonable podría considerar la complejidad de los campos, el desconocimiento de información requerida o el temor a compartir datos. La investigación podría combinar observación de tareas y entrevistas posteriores. No bastaría con cambiar el color del botón «Continuar».</p>
+<h2 id="2-21-lista-de-verificacion-del-capitulo">2.21. Lista de verificación del capítulo</h2>
+<p>Marca cada punto solo si puedes justificarlo con un ejemplo:</p>
+<ul>
+<li>[ ] Diferencio una necesidad real, una solicitud de funcionalidad, una hipótesis y una solución.</li>
+<li>[ ] Conozco el papel y alcance de ISO 9241-210.</li>
+<li>[ ] Sé distinguir usuarios directos, afectados, compradores y otras partes interesadas.</li>
+<li>[ ] Puedo elegir métodos actitudinales/conductuales y cualitativos/cuantitativos según una decisión pendiente.</li>
+<li>[ ] Elaboro preguntas de entrevista que no conduzcan artificialmente a una respuesta.</li>
+<li>[ ] Documento criterios de reclutamiento y grupos no incluidos.</li>
+<li>[ ] No convierto muestras cualitativas pequeñas en porcentajes poblacionales.</li>
+<li>[ ] Mantengo trazabilidad entre observación, hallazgo, recomendación y validación.</li>
+<li>[ ] Identifico sesgos e hipótesis rivales.</li>
+<li>[ ] Preparo consentimiento, minimización de datos y medidas de accesibilidad.</li>
+<li>[ ] Considero salvaguardas adicionales para menores y datos académicos.</li>
+<li>[ ] Puedo transformar una petición de UI en un plan de investigación sencillo y accionable.</li>
+</ul>
+<p><strong>Criterio de dominio:</strong> producir un plan de una página, una guía de entrevista neutral, una tabla de evidencias y dos decisiones posibles condicionadas a resultados distintos.</p>
+<h2 id="2-22-relaciones-con-los-capitulos-siguientes">2.22. Relaciones con los capítulos siguientes</h2>
+<ul>
+<li><strong>Capítulo 03 · Objetivos, tareas, modelos mentales y arquitectura de información.</strong> Toma los datos sobre vocabulario, secuencia de tareas y necesidades para estructurar navegación y contenido. <strong>Se recomienda leerlo después de este capítulo.</strong></li>
+<li><strong>Capítulo 04 · Psicología cognitiva.</strong> Explica mecanismos que pueden sustentar hipótesis; no reemplaza la investigación contextual.</li>
+<li><strong>Capítulo 05 · Heurísticas.</strong> Ayuda a detectar problemas hipotéticos durante inspecciones expertas y a priorizar pruebas posteriores.</li>
+<li><strong>Capítulo 06 · Accesibilidad.</strong> Profundiza en criterios verificables y en la diversidad de necesidades investigadas aquí.</li>
+<li><strong>Capítulo 23 · Formularios.</strong> Utiliza investigación sobre errores, campos, secuencias y tareas antes de decidir el diseño.</li>
+<li><strong>Capítulo 33 · Prototipos y pruebas.</strong> Enseña con mayor profundidad cómo evaluar propuestas de solución, incluyendo investigación evaluativa.</li>
+<li><strong>Capítulo 36 · Auditoría y métricas.</strong> Traduce preguntas y hallazgos en indicadores bien definidos, controles de calidad y seguimiento.</li>
+</ul>
+<hr/>
+<h1 class="chapter-heading" id="referencias-verificadas-del-capitulo-02">Referencias verificadas del Capítulo 02</h1>
+<p><strong>[C02-F01]</strong> ISO. <em>ISO 9241-210:2019 — Ergonomics of human-system interaction — Part 210: Human-centred design for interactive systems.</em> Ficha oficial: <a href="https://www.iso.org/standard/77520.html" rel="noopener noreferrer" target="_blank">https://www.iso.org/standard/77520.html</a>. Consulta: 19 de octubre de 2026. La ficha describe el alcance; el texto completo de la norma puede requerir licencia.</p>
+<p><strong>[C02-F02]</strong> Nielsen Norman Group. Christian Rohrer. <em>When to Use Which User-Experience Research Methods.</em> <a href="https://www.nngroup.com/articles/which-ux-research-methods/" rel="noopener noreferrer" target="_blank">https://www.nngroup.com/articles/which-ux-research-methods/</a>. Consulta: 19 de octubre de 2026.</p>
+<p><strong>[C02-F03]</strong> GOV.UK Service Manual. <em>Plan a round of user research.</em> <a href="https://www.gov.uk/service-manual/user-research/plan-round-of-user-research" rel="noopener noreferrer" target="_blank">https://www.gov.uk/service-manual/user-research/plan-round-of-user-research</a>. Consulta: 19 de octubre de 2026.</p>
+<p><strong>[C02-F04]</strong> OECD. <em>Survey design and technical documentation supporting the OECD Risks that Matter Survey</em> (2025), apartado sobre muestreo y sesgo de no respuesta. <a href="https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/07/survey-design-and-technical-documentation-supporting-the-oecd-risks-that-matter-survey_dfd831d9/5eebe551-en.pdf" rel="noopener noreferrer" target="_blank">https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/07/survey-design-and-technical-documentation-supporting-the-oecd-risks-that-matter-survey_dfd831d9/5eebe551-en.pdf</a>. Consulta: 19 de octubre de 2026.</p>
+<p><strong>[C02-F05]</strong> Nielsen Norman Group. Raluca Budiu. <em>Why 5 Participants Are Okay in a Qualitative Study, but Not in a Quantitative One.</em> <a href="https://www.nngroup.com/articles/5-test-users-qual-quant/" rel="noopener noreferrer" target="_blank">https://www.nngroup.com/articles/5-test-users-qual-quant/</a>. Consulta: 19 de octubre de 2026.</p>
+<p><strong>[C02-F06]</strong> W3C Web Accessibility Initiative. <em>Involving Users in Evaluating Web Accessibility.</em> <a href="https://www.w3.org/WAI/test-evaluate/involving-users/" rel="noopener noreferrer" target="_blank">https://www.w3.org/WAI/test-evaluate/involving-users/</a> y <em>Involving Users in Web Projects for Better, Easier Accessibility.</em> <a href="https://www.w3.org/WAI/planning/involving-users/" rel="noopener noreferrer" target="_blank">https://www.w3.org/WAI/planning/involving-users/</a>. Consulta: 19 de octubre de 2026.</p>
+<p><strong>[C02-F07]</strong> Nielsen Norman Group. Maria Rosala y Kara Pernice. <em>User Interviews 101.</em> Publicado en 2023; última revisión indicada en 2026. <a href="https://www.nngroup.com/articles/user-interviews/" rel="noopener noreferrer" target="_blank">https://www.nngroup.com/articles/user-interviews/</a>. Consulta: 19 de octubre de 2026.</p>
+<p><strong>[C02-F08]</strong> GOV.UK Service Manual. <em>Contextual research and observation.</em> <a href="https://www.gov.uk/service-manual/user-research/contextual-research-and-observation" rel="noopener noreferrer" target="_blank">https://www.gov.uk/service-manual/user-research/contextual-research-and-observation</a>. Consulta: 19 de octubre de 2026.</p>
+<p><strong>[C02-F09]</strong> GOV.UK Service Manual. <em>Analyse a research session.</em> <a href="https://www.gov.uk/service-manual/user-research/analyse-a-research-session" rel="noopener noreferrer" target="_blank">https://www.gov.uk/service-manual/user-research/analyse-a-research-session</a>. Consulta: 19 de octubre de 2026.</p>
+<p><strong>[C02-F10]</strong> Wang, Y. et al. (2024). <em>Who Uses Personas in Requirements Engineering: The Practitioners' Perspective.</em> Estudio empírico de prácticas profesionales. <a href="https://arxiv.org/abs/2403.15917" rel="noopener noreferrer" target="_blank">https://arxiv.org/abs/2403.15917</a>. Consulta: 19 de octubre de 2026.</p>
+<p><strong>[C02-F11]</strong> Nielsen Norman Group. <em>Personas vs. Jobs-to-Be-Done.</em> <a href="https://www.nngroup.com/articles/personas-jobs-be-done/" rel="noopener noreferrer" target="_blank">https://www.nngroup.com/articles/personas-jobs-be-done/</a>. Consulta: 19 de octubre de 2026.</p>
+<p><strong>[C02-F12]</strong> GOV.UK Service Manual. <em>Getting informed consent for user research.</em> <a href="https://www.gov.uk/service-manual/user-research/getting-users-consent-for-research" rel="noopener noreferrer" target="_blank">https://www.gov.uk/service-manual/user-research/getting-users-consent-for-research</a>. Consulta: 19 de octubre de 2026.</p>
+<p><strong>[C02-F13]</strong> GOV.UK Service Manual. <em>Managing user research data and participant privacy.</em> <a href="https://www.gov.uk/service-manual/user-research/managing-user-research-data-participant-privacy" rel="noopener noreferrer" target="_blank">https://www.gov.uk/service-manual/user-research/managing-user-research-data-participant-privacy</a>. Consulta: 19 de octubre de 2026.</p>
+<p><strong>[C02-F14]</strong> UK Department for Education. <em>Research with children and young people.</em> <a href="https://user-research.education.gov.uk/guidance/ethics-and-safeguarding/research-with-children-and-young-people" rel="noopener noreferrer" target="_blank">https://user-research.education.gov.uk/guidance/ethics-and-safeguarding/research-with-children-and-young-people</a>. Consulta: 19 de octubre de 2026. Referencia metodológica extranjera, no asesoría legal ecuatoriana; la propia página advierte que parte de su orientación está en revisión.</p>
+<p><strong>Nota de método:</strong> Los ejemplos, participantes, resultados y métricas de este capítulo son sintéticos. No se han realizado entrevistas, experimentos ni estudios de usabilidad reales para elaborar los ejemplos. Las referencias fundamentan conceptos y métodos; no constituyen evidencia empírica sobre una plataforma educativa concreta.</p>
+<hr/>
+<p><strong>Fin del Capítulo 02.</strong> El próximo capítulo previsto es <em>03. Objetivos, tareas, modelos mentales y arquitectura de información</em>.</p>
+</article><div class="end-note"><span class="eyebrow">SIGUIENTE PASO</span><a class="next-link" href="03.html"><span>Siguiente capítulo</span><strong>03. Objetivos, tareas y modelos mentales →</strong></a></div><footer class="reader-footer">Manual UI/UX · Versión de trabajo 0.3 · 3 de 36 capítulos disponibles</footer></main>
+<aside class="reader-outline" aria-label="En esta página"><div class="outline-inner"><div class="outline-heading">EN ESTA PÁGINA</div><nav><a class="outline-item level-2" href="#2-1-el-problema-de-disenar-a-partir-de-suposiciones">2.1. El problema de diseñar a partir de suposiciones</a><a class="outline-item level-2" href="#2-2-diseno-centrado-en-las-personas-que-establece-iso-9241-210">2.2. Diseño centrado en las personas: qué establece ISO 9241-210</a><a class="outline-item level-2" href="#2-3-usuario-cliente-actor-y-parte-interesada-no-son-sinonimos">2.3. Usuario, cliente, actor y parte interesada no son sinónimos</a><a class="outline-item level-3" href="#unidad-de-analisis-persona-tarea-contexto">Unidad de análisis: persona + tarea + contexto</a><a class="outline-item level-2" href="#2-4-que-preguntas-responde-cada-tipo-de-investigacion">2.4. Qué preguntas responde cada tipo de investigación</a><a class="outline-item level-3" href="#matriz-rapida-de-seleccion">Matriz rápida de selección</a><a class="outline-item level-2" href="#2-5-formular-un-problema-una-hipotesis-y-una-pregunta-de-investigacion">2.5. Formular un problema, una hipótesis y una pregunta de investigación</a><a class="outline-item level-3" href="#registro-de-supuestos">Registro de supuestos</a><a class="outline-item level-2" href="#2-6-planificar-una-investigacion-pequena-pero-rigurosa">2.6. Planificar una investigación pequeña pero rigurosa</a><a class="outline-item level-2" href="#2-7-reclutamiento-y-muestreo-encontrar-a-las-personas-correctas">2.7. Reclutamiento y muestreo: encontrar a las personas correctas</a><a class="outline-item level-3" href="#muestreo-intencional-para-descubrir-mecanismos">Muestreo intencional para descubrir mecanismos</a><a class="outline-item level-3" href="#encuestas-y-representatividad">Encuestas y representatividad</a><a class="outline-item level-3" href="#cinco-participantes-son-suficientes">¿Cinco participantes son suficientes?</a><a class="outline-item level-2" href="#2-8-entrevistas-descubrir-experiencias-sin-poner-respuestas-en-boca-del-participante">2.8. Entrevistas: descubrir experiencias sin poner respuestas en boca del participante</a><a class="outline-item level-3" href="#preguntas-utiles-y-preguntas-sesgadas">Preguntas útiles y preguntas sesgadas</a><a class="outline-item level-3" href="#guion-recomendado">Guion recomendado</a><a class="outline-item level-2" href="#2-9-observacion-contextual-lo-que-una-entrevista-no-puede-revelar">2.9. Observación contextual: lo que una entrevista no puede revelar</a><a class="outline-item level-3" href="#otras-tecnicas-de-descubrimiento">Otras técnicas de descubrimiento</a><a class="outline-item level-2" href="#2-10-encuestas-medir-opiniones-y-caracteristicas-con-cuidado">2.10. Encuestas: medir opiniones y características con cuidado</a><a class="outline-item level-3" href="#ejemplo-de-encuesta-minima-sin-recoleccion-real">Ejemplo de encuesta mínima sin recolección real</a><a class="outline-item level-2" href="#2-11-de-datos-dispersos-a-hallazgos-defendibles">2.11. De datos dispersos a hallazgos defendibles</a><a class="outline-item level-3" href="#ejemplo-evidencia-frente-a-conclusion-apresurada">Ejemplo: evidencia frente a conclusión apresurada</a><a class="outline-item level-3" href="#matriz-de-hallazgos">Matriz de hallazgos</a><a class="outline-item level-2" href="#2-12-personas-segmentos-y-arquetipos-utiles-solo-si-proceden-de-datos">2.12. Personas, segmentos y arquetipos: útiles solo si proceden de datos</a><a class="outline-item level-2" href="#2-13-jobs-to-be-done-entender-el-progreso-que-la-persona-busca">2.13. Jobs to Be Done: entender el progreso que la persona busca</a><a class="outline-item level-2" href="#2-14-segmentacion-diferenciar-necesidades-sin-fragmentar-el-producto">2.14. Segmentación: diferenciar necesidades sin fragmentar el producto</a><a class="outline-item level-2" href="#2-15-etica-consentimiento-y-proteccion-de-participantes">2.15. Ética, consentimiento y protección de participantes</a><a class="outline-item level-3" href="#informacion-minima-a-comunicar">Información mínima a comunicar</a><a class="outline-item level-3" href="#minimizacion-de-datos">Minimización de datos</a><a class="outline-item level-3" href="#investigacion-con-ninas-ninos-y-adolescentes">Investigación con niñas, niños y adolescentes</a><a class="outline-item level-2" href="#2-16-accesibilidad-de-la-propia-investigacion">2.16. Accesibilidad de la propia investigación</a><a class="outline-item level-2" href="#2-17-sesgos-y-amenazas-a-la-validez">2.17. Sesgos y amenazas a la validez</a><a class="outline-item level-3" href="#cuatro-preguntas-de-control">Cuatro preguntas de control</a><a class="outline-item level-2" href="#2-18-caso-practico-integrado-investigar-la-descarga-de-una-constancia">2.18. Caso práctico integrado: investigar la descarga de una constancia</a><a class="outline-item level-3" href="#paso-a-definir-incertidumbre">Paso A. Definir incertidumbre</a><a class="outline-item level-3" href="#paso-b-planificar-y-reclutar">Paso B. Planificar y reclutar</a><a class="outline-item level-3" href="#paso-c-observar-tareas">Paso C. Observar tareas</a><a class="outline-item level-3" href="#paso-d-registrar-evidencias">Paso D. Registrar evidencias</a><a class="outline-item level-3" href="#paso-e-decidir-intervenciones">Paso E. Decidir intervenciones</a><a class="outline-item level-3" href="#paso-f-validar-y-documentar">Paso F. Validar y documentar</a><a class="outline-item level-2" href="#2-19-codigo-aplicado-instrumentacion-de-eventos-sin-registrar-datos-sensibles">2.19. Código aplicado: instrumentación de eventos sin registrar datos sensibles</a><a class="outline-item level-2" href="#2-20-laboratorio-visual-distinguir-hechos-interpretaciones-y-decisiones">2.20. Laboratorio visual: distinguir hechos, interpretaciones y decisiones</a><a class="outline-item level-3" href="#ejercicio-individual">Ejercicio individual</a><a class="outline-item level-2" href="#2-21-lista-de-verificacion-del-capitulo">2.21. Lista de verificación del capítulo</a><a class="outline-item level-2" href="#2-22-relaciones-con-los-capitulos-siguientes">2.22. Relaciones con los capítulos siguientes</a></nav><div class="outline-download"><p>¿Prefieres leer sin conexión?</p><a href="../pdf/capitulo-02.pdf" download>Descargar PDF ↗</a></div></div></aside></div><div class="overlay" id="nav-overlay"></div><script src="../assets/site.js" defer></script></body></html>

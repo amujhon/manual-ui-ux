@@ -1,0 +1,316 @@
+<!doctype html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Manual integral de UI/UX: fundamentos, investigación, estándares, componentes e implementación. Lectura en línea y PDF gratuitos."><meta name="theme-color" content="#f9f9f6"><title>Capítulo 01 — Manual UI/UX</title><link rel="stylesheet" href="../assets/styles.css"></head><body class="reader-page"><a class="skip-link" href="#contenido">Saltar al contenido</a><header class="topbar">
+<a class="brand" href="../index.html" aria-label="Manual UI/UX, ir al inicio"><span class="brand-icon"><svg viewBox="0 0 42 42" width="40" height="40" aria-hidden="true"><rect x="1" y="1" width="40" height="40" rx="12" fill="currentColor"/><path d="M12 11v20m0-20 10 10-10 10m10-10 9-10m-9 10 9 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="brand-text">manual<span class="brand-period">.</span><small>UI / UX</small></span></a>
+<nav class="top-links" aria-label="Navegación principal"><a href="../index.html#indice" >Capítulos</a><a href="../introduccion.html" >Presentación</a><a href="../index.html#recursos">Recursos</a></nav>
+<div class="top-actions"><span class="version-pill">EDICIÓN 0.3</span><button class="icon-button theme-toggle" type="button" aria-label="Alternar modo oscuro" title="Cambiar tema"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg></button><button class="icon-button mobile-menu" type="button" aria-expanded="false" aria-controls="reader-sidebar" aria-label="Abrir índice"><svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button></div>
+</header><div class="reading-progress" aria-hidden="true"><span id="reading-progress"></span></div>
+<div class="reader-shell"><aside class="reader-sidebar" id="reader-sidebar" aria-label="Capítulos del manual"><div class="sidebar-heading">CONTENIDO DEL MANUAL</div><a class="intro-nav " href="../introduccion.html">↗ Presentación y guía de lectura</a><div class="sidebar-scroll"><div class="nav-group"><p class="nav-group-label">PARTE I <span>· Fundamentos y métodos</span></p><a class="nav-chapter is-current" href="../capitulos/01.html" aria-current=page><span class="chapter-num">01</span><span>Introducción a UI, UX y HCI</span></a><a class="nav-chapter " href="../capitulos/02.html" ><span class="chapter-num">02</span><span>Investigación de usuarios y diseño centrado en las personas</span></a><a class="nav-chapter " href="../capitulos/03.html" ><span class="chapter-num">03</span><span>Objetivos, tareas, modelos mentales y arquitectura de información</span></a><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">04</span><span>Psicología cognitiva y leyes aplicadas al diseño</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">05</span><span>Heurísticas y principios de interacción</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">06</span><span>Fundamentos de accesibilidad y diseño inclusivo</span><span class="small-dot" aria-hidden="true"></span></div></div><div class="nav-group"><p class="nav-group-label">PARTE II <span>· Lenguaje visual</span></p><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">07</span><span>Composición, percepción y jerarquía visual</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">08</span><span>Tipografía y legibilidad</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">09</span><span>Color, contraste y sistemas de temas</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">10</span><span>Espaciado, cuadrículas y layouts</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">11</span><span>Iconografía, imágenes e identidad visual</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">12</span><span>UX Writing y diseño de contenido</span><span class="small-dot" aria-hidden="true"></span></div></div><div class="nav-group"><p class="nav-group-label">PARTE III <span>· Componentes e interacción</span></p><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">13</span><span>Design Systems y Design Tokens</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">14</span><span>Anatomía y comportamiento de componentes interactivos</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">15</span><span>Botones, enlaces y controles de acción</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">16</span><span>Inputs y entrada de texto</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">17</span><span>Controles de selección y elección</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">18</span><span>Inputs especializados y captura avanzada</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">19</span><span>Estados, feedback, errores y animación</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">20</span><span>Diálogos, popovers, tooltips y notificaciones</span><span class="small-dot" aria-hidden="true"></span></div></div><div class="nav-group"><p class="nav-group-label">PARTE IV <span>· Patrones y experiencias</span></p><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">21</span><span>Navegación y orientación</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">22</span><span>Validaciones y recuperación de errores</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">23</span><span>Diseño integral de formularios</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">24</span><span>Formularios multipaso y flujos complejos</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">25</span><span>Búsqueda, filtrado y ordenamiento</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">26</span><span>Listas, tablas y datos densos</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">27</span><span>Visualización de datos y dashboards</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">28</span><span>Autenticación, permisos y consentimiento</span><span class="small-dot" aria-hidden="true"></span></div></div><div class="nav-group"><p class="nav-group-label">PARTE V <span>· Calidad transversal</span></p><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">29</span><span>Diseño responsive y adaptive</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">30</span><span>Convenciones de Android, iOS, web y escritorio</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">31</span><span>Accesibilidad avanzada y tecnologías asistivas</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">32</span><span>Rendimiento percibido, resiliencia, confianza y ética</span><span class="small-dot" aria-hidden="true"></span></div></div><div class="nav-group"><p class="nav-group-label">PARTE VI <span>· Implementación y evaluación</span></p><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">33</span><span>Wireframes, prototipos e investigación evaluativa</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">34</span><span>Implementación de UI/UX en la web</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">35</span><span>Implementación de UI/UX con Flutter</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">36</span><span>Auditoría, métricas y evolución del diseño</span><span class="small-dot" aria-hidden="true"></span></div></div></div></aside>
+<main id="contenido" class="reader-main"><div class="reader-crumb"><a href="../index.html">Manual UI/UX</a><span aria-hidden="true">/</span><span>Capítulo 01</span></div><div class="article-header"><span class="eyebrow">CAPÍTULO 01 DE 36</span><div class="reader-title"><h1>Introducción a UI, UX y HCI</h1></div><div class="article-meta"><span>3,860 palabras</span><span class="meta-sep"></span><span>18 min de lectura aprox.</span><span class="meta-sep"></span><span>Publicado · v0.3</span></div><div class="chapter-tools"><a class="pill-action" href="../pdf/capitulo-01.pdf" download><span aria-hidden="true">↓</span> PDF</a><a class="pill-action" href="../fuentes/capitulo-01.md" download>Markdown</a></div></div><div class="practical-panel"><div class="practical-icon">↗</div><div><strong>Laboratorio del capítulo 01</strong><p>Comparación de interfaces y ejemplo de código Flutter.</p><div class="practical-links"><a href="../recursos/comparacion-ui-ux.html">Abrir ejemplo interactivo ↗</a><a href="../recursos/main.dart" download>Descargar código Dart ↓</a></div></div></div><article class="prose" data-article><h1 class="chapter-heading" id="capitulo-01-introduccion-a-ui-ux-y-hci">Capítulo 01. Introducción a UI, UX y HCI</h1>
+<p><strong>Nivel:</strong> Fundamental.<br/>
+<strong>Prerrequisitos:</strong> Ninguno.<br/>
+<strong>Conexiones posteriores:</strong> Cap. 02 (investigación), 03 (arquitectura de información), 04 (cognición), 05 (heurísticas), 06 (accesibilidad).<br/>
+<strong>Resultado esperado:</strong> Ser capaz de describir una experiencia digital como un sistema de tareas, interacciones y resultados, y distinguir problemas visuales, funcionales, informacionales, de usabilidad y de accesibilidad.</p>
+<h2 id="1-1-el-error-de-empezar-por-la-pantalla">1.1. El error de empezar por la pantalla</h2>
+<p>Imagina que una persona ingresa a un portal educativo porque necesita descargar una constancia de matrícula. Al abrir el sitio encuentra una pantalla limpia: encabezado equilibrado, colores institucionales, iconos consistentes y animaciones discretas. Sin embargo, no existe ninguna opción llamada «Constancia de matrícula». La operación está escondida en «Gestión → Recursos → Servicios → Documentos». Tras encontrarla, el sistema muestra «Operación finalizada», sin explicar si el documento se creó, se envió por correo o quedó pendiente.</p>
+<p>La interfaz puede ser visualmente correcta y, aun así, la experiencia resultar deficiente. El problema no se soluciona necesariamente redibujando iconos: hay que estudiar la estructura de información, las palabras elegidas, la visibilidad de la acción, la respuesta del sistema y el objetivo que la persona intentaba cumplir.</p>
+<p>Este caso introduce la diferencia central entre <strong>la presentación y los mecanismos de interacción</strong> y <strong>la experiencia que emerge al intentar satisfacer una necesidad</strong>.</p>
+<p>No toda buena experiencia requiere una apariencia sofisticada. Una interfaz sobria, accesible, predecible y eficaz puede ser una solución superior a otra más decorada que aumenta los pasos o dificulta el reconocimiento de acciones.</p>
+<h3 id="un-mismo-problema-visto-desde-varias-disciplinas">Un mismo problema visto desde varias disciplinas</h3>
+<div aria-label="Tabla desplazable horizontalmente" class="table-scroller" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th>Perspectiva</th>
+<th>Pregunta que formula ante el caso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UI</td>
+<td>¿La acción es visible, distinguible y comprensible en la pantalla?</td>
+</tr>
+<tr>
+<td>Arquitectura de información</td>
+<td>¿La persona puede deducir dónde encontrar el documento?</td>
+</tr>
+<tr>
+<td>Diseño de interacción</td>
+<td>¿Qué ocurre al activar la acción, esperar, fallar o volver atrás?</td>
+</tr>
+<tr>
+<td>Diseño de contenido</td>
+<td>¿La etiqueta y los mensajes comunican con precisión qué sucede?</td>
+</tr>
+<tr>
+<td>Usabilidad</td>
+<td>¿Puede completar la tarea de forma eficaz, eficiente y satisfactoria?</td>
+</tr>
+<tr>
+<td>Accesibilidad</td>
+<td>¿Puede hacerlo también con teclado, lector de pantalla u otras adaptaciones?</td>
+</tr>
+<tr>
+<td>UX</td>
+<td>¿Cómo percibe y vive todo el proceso, incluido el resultado y lo que ocurre después?</td>
+</tr>
+<tr>
+<td>Ingeniería</td>
+<td>¿La funcionalidad produce datos correctos, seguros, disponibles y recuperables?</td>
+</tr>
+</tbody>
+</table></div>
+<p>Estas perspectivas se solapan; no son departamentos independientes ni una cadena rígida de trabajo.</p>
+<h2 id="1-2-que-es-una-interfaz-de-usuario-ui">1.2. Qué es una interfaz de usuario (UI)</h2>
+<p><strong>UI (User Interface)</strong> es la parte de un sistema mediante la cual una persona recibe información, comprende opciones y ejecuta acciones. En productos gráficos incluye controles, distribución espacial, tipografía, iconografía, color y estados visuales; también abarca elementos de interacción más allá de lo puramente visual, como el manejo del foco, el teclado y la semántica de los componentes.</p>
+<p>Dos interpretaciones incompletas son frecuentes:</p>
+<ul>
+<li>«UI significa escoger colores y dibujar pantallas». El diseño visual es una parte de la UI, pero la interfaz también expresa estado, opciones, restricciones y comportamiento.</li>
+<li>«UI equivale a UX». Una UI concreta participa en la experiencia, pero no la explica completamente. Latencia, errores de negocio, disponibilidad de información y expectativas previas también influyen en la UX.</li>
+</ul>
+<p><strong>Ejemplo.</strong> Un botón con la etiqueta «Descargar constancia» es una pieza de UI. También lo son su estado deshabilitado, el indicador de progreso, la explicación de por qué no está disponible y la confirmación de lo que ocurrió tras activarlo. La pantalla no está diseñada por completo si solo se dibuja el botón en su estado inicial.</p>
+<h2 id="1-3-que-es-la-experiencia-de-usuario-ux">1.3. Qué es la experiencia de usuario (UX)</h2>
+<p><strong>UX (User Experience)</strong> se refiere a las percepciones y respuestas de una persona asociadas con el uso o uso anticipado de un producto, sistema o servicio. La experiencia se configura antes, durante y después de la interacción. Don Norman y Jakob Nielsen destacaron que la experiencia abarca el conjunto de interacciones con productos, servicios y organización; por ello no puede reducirse a la interfaz de una sola pantalla [F1].</p>
+<p>En el caso de la constancia académica, la experiencia puede verse afectada por varios factores:</p>
+<p><strong>Antes de usar.</strong> ¿La persona sabe que el documento está disponible? ¿Es razonable esperar que pueda obtenerlo desde el celular? ¿Recuerda cómo ingresar?</p>
+<p><strong>Durante el uso.</strong> ¿Encuentra la opción? ¿Comprende si el documento corresponde al período académico correcto? ¿Puede descargarlo sin volver a introducir información que el sistema ya conoce?</p>
+<p><strong>Después del uso.</strong> ¿El archivo abre correctamente? ¿Tiene el contenido esperado? ¿Se informa claramente si requiere validación institucional? ¿Puede encontrarlo otra vez?</p>
+<p>Una experiencia positiva no se demuestra con una calificación estética ni con el hecho de que la operación exista en el menú. Hay que observar el recorrido completo y sus consecuencias para las personas usuarias.</p>
+<h3 id="ux-como-experiencia-y-ux-como-disciplina">UX como experiencia y UX como disciplina</h3>
+<p>Conviene distinguir dos usos del término. <strong>UX como fenómeno</strong> es lo que las personas efectivamente experimentan. <strong>Diseño UX como práctica profesional</strong> reúne métodos para investigar, modelar, mejorar y evaluar esa experiencia. Un equipo puede hacer actividades de UX y aun así entregar una mala experiencia; el uso de un método no garantiza el resultado [F2].</p>
+<h2 id="1-4-que-es-hci-y-como-se-vincula-con-ui-ux">1.4. Qué es HCI y cómo se vincula con UI/UX</h2>
+<p><strong>HCI (Human–Computer Interaction)</strong>, o interacción persona-computadora, es un campo interdisciplinario que estudia cómo las personas interactúan con sistemas informáticos y cómo diseñar y evaluar esas interacciones. Integra conocimientos de informática, psicología, ergonomía, ciencias cognitivas, diseño y otras disciplinas.</p>
+<p>En términos prácticos, HCI ayuda a plantear preguntas como: ¿cuánto esfuerzo exige identificar una acción?, ¿cómo cambia el desempeño con la práctica?, ¿qué ocurre cuando el sistema responde tarde?, ¿cómo influyen la capacidad motriz y el contexto de uso?, ¿cómo detectar un error antes de que cause consecuencias?</p>
+<p>No debe interpretarse como una jerarquía matemática en la que «HCI contiene UX y UX contiene UI» en todos los sentidos. Son conceptos y ámbitos de trabajo con distintos alcances, métodos y objetivos. El diagrama siguiente representa sus relaciones funcionales, no una clasificación formal de subconjuntos:</p>
+<div class="code-block"><button aria-label="Copiar fragmento de código" class="copy-code" type="button">Copiar código</button><pre><code class="language-mermaid">flowchart LR
+    P[Persona y objetivos] --&gt; I[Interacción con el sistema]
+    C[Contexto de uso] --&gt; I
+    UI[Interfaz y controles] --&gt; I
+    S[Servicios, datos y reglas] --&gt; I
+    I --&gt; R[Resultados de la tarea]
+    R --&gt; UX[Experiencia percibida]
+    I --&gt; UX
+    UX --&gt; E[Evaluación y mejoras]
+    E --&gt; UI
+    E --&gt; S
+</code></pre></div>
+<p>La calidad final depende de la colaboración entre investigación, diseño e ingeniería.</p>
+<h2 id="1-5-usabilidad-eficaz-eficiente-y-satisfactoria-para-quien-y-en-que-contexto">1.5. Usabilidad: eficaz, eficiente y satisfactoria para quién y en qué contexto</h2>
+<p>La norma <strong>ISO 9241-11:2018</strong> plantea la usabilidad en términos de la capacidad de usuarios especificados para lograr objetivos especificados con <strong>eficacia, eficiencia y satisfacción</strong>, en un <strong>contexto de uso especificado</strong>. La ficha oficial confirma que trata definiciones y conceptos de usabilidad, no un proceso de diseño prescrito [F3].</p>
+<p>Las palabras «usuarios», «objetivos» y «contexto» son esenciales. No existe una única evaluación de usabilidad independiente de quién utiliza el sistema y para qué.</p>
+<p><strong>Eficacia.</strong> Grado en el que se alcanza el objetivo de manera correcta y completa. Descargar el archivo equivocado no cumple el objetivo, aunque la descarga técnica haya terminado sin errores.</p>
+<p><strong>Eficiencia.</strong> Recursos necesarios para obtener el resultado; pueden incluir tiempo, esfuerzo, pasos, carga mental o costos operativos, según el estudio.</p>
+<p><strong>Satisfacción.</strong> Percepción y respuesta de la persona durante y después del uso, evaluada mediante instrumentos apropiados. No debe inferirse automáticamente a partir del tiempo o número de clics.</p>
+<h3 id="ejemplo-de-metricas">Ejemplo de métricas</h3>
+<p>En una prueba hipotética, ocho participantes intentan descargar una constancia. Seis obtienen el documento correcto sin ayuda; los otros dos no completan la tarea. La <strong>tasa de finalización correcta observada</strong> sería:</p>
+<p>[
+\text{Tasa de éxito} = \frac{6}{8} \times 100 = 75%.
+]</p>
+<p>Este 75 % es <strong>un dato ilustrativo ficticio</strong>, no una medida real de una plataforma. No permite, por sí solo, conocer la causa de los fallos ni generalizar a toda una población. Sería necesario revisar tareas, participantes, incidencias, posibles sesgos y condiciones de prueba.</p>
+<p>Del mismo modo, el tiempo medio de finalización debería calcularse y reportarse con una regla explícita: ¿se incluyen intentos fallidos?, ¿se reportan por separado?, ¿qué ocurre con quienes solicitan ayuda? Sin esa definición, dos cifras de «tiempo promedio» pueden no ser comparables.</p>
+<h3 id="cinco-atributos-utiles-sin-confundirlos-con-la-definicion-iso">Cinco atributos útiles, sin confundirlos con la definición ISO</h3>
+<p>Nielsen Norman Group también caracteriza la usabilidad mediante facilidad de aprendizaje (<em>learnability</em>), eficiencia, memorabilidad, errores y satisfacción [F4]. Son dimensiones útiles para analizar una interfaz; no conviene presentarlas como sustitución literal de la formulación de ISO 9241-11.</p>
+<p>Para un sistema administrativo de uso diario, podría ser crucial la eficiencia después del aprendizaje. Para un formulario de matrícula que una familia completa una vez al año, cobra mayor importancia el desempeño en el primer uso y la capacidad de retomar el proceso tras meses de inactividad.</p>
+<p><strong>Consecuencia práctica:</strong> no optimices un producto solo para el usuario experto si gran parte de sus usuarios son ocasionales.</p>
+<h2 id="1-6-accesibilidad-inclusion-y-usabilidad-relacion-sin-equivalencias-falsas">1.6. Accesibilidad, inclusión y usabilidad: relación sin equivalencias falsas</h2>
+<p>La <strong>accesibilidad</strong> busca que las personas con discapacidad puedan percibir, comprender, navegar e interactuar con herramientas y contenidos digitales. La <strong>usabilidad</strong> aborda la eficacia, eficiencia y satisfacción en las tareas. El <strong>diseño inclusivo</strong> considera además la diversidad de circunstancias, capacidades, recursos y contextos. Son objetivos relacionados, pero no idénticos [F5].</p>
+<p>Ejemplo: colocar una etiqueta visible y programáticamente asociada a un campo ayuda a usuarios que ven la pantalla y a quienes utilizan lectores de pantalla. Sin embargo, un formulario puede cumplir ciertos criterios técnicos de accesibilidad y continuar siendo demasiado largo, confuso o difícil de completar. A la inversa, que una prueba con usuarios sin discapacidad salga bien no demuestra que el formulario sea accesible.</p>
+<p>La recomendación de este manual es abordar accesibilidad desde el inicio, incluir personas con necesidades diversas en las pruebas y verificar criterios normativos pertinentes. Las <strong>WCAG 2.2</strong> definen criterios verificables de accesibilidad web con niveles A, AA y AAA [F6]; no certifican por sí solas que toda la experiencia sea satisfactoria.</p>
+<p>La conformidad WCAG para una página web se evalúa respecto de la página completa y sus variaciones, no de un control aislado que funciona correctamente [F6].</p>
+<h2 id="1-7-arquitectura-de-informacion-interaccion-visual-y-contenido">1.7. Arquitectura de información, interacción, visual y contenido</h2>
+<p>Estos conceptos suelen confundirse porque todos participan en una misma pantalla. Conviene separarlos analíticamente:</p>
+<p><strong>Arquitectura de información (IA).</strong> Organiza conceptos, secciones, relaciones, navegación y formas de encontrar contenido. En nuestro ejemplo, determina si la constancia debe pertenecer a «Mis documentos», «Trámites» u otra estructura basada en el lenguaje y las expectativas de quienes usan el sistema.</p>
+<p><strong>Diseño de interacción (IxD).</strong> Define la respuesta del producto a las acciones y la secuencia de eventos: activar «Consultar», mostrar espera, presentar el resultado, permitir reintento o cancelar una solicitud.</p>
+<p><strong>Diseño visual.</strong> Establece jerarquía, tipografía, espacio, color y otras propiedades de presentación para comunicar prioridades y relaciones.</p>
+<p><strong>Diseño de contenido (content design / UX writing).</strong> Define los textos y su relación con las tareas. «Documento generado» y «Tu constancia está disponible para descargar» no expresan exactamente lo mismo; el segundo comunica mejor una acción posible cuando esa disponibilidad es real.</p>
+<p><strong>Diseño de servicio.</strong> Considera la experiencia más allá de una pantalla: aprobación institucional, disponibilidad del documento, notificaciones, asistencia, entrega y procedimientos que pueden involucrar personas u otros sistemas.</p>
+<p>En muchos productos, mejorar una experiencia requiere cambiar simultáneamente varias de estas capas. No se resolverá un problema de información con un color de botón distinto si la causa es que el documento ni siquiera existe en el sistema.</p>
+<h2 id="1-8-objetivos-tareas-soluciones-y-restricciones">1.8. Objetivos, tareas, soluciones y restricciones</h2>
+<p>El diseño de calidad comienza distinguiendo lo que una persona <strong>quiere lograr</strong> de la interfaz que el equipo <strong>propone construir</strong>.</p>
+<div aria-label="Tabla desplazable horizontalmente" class="table-scroller" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th>Concepto</th>
+<th>Ejemplo del caso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Necesidad</td>
+<td>Disponer de una constancia de matrícula válida.</td>
+</tr>
+<tr>
+<td>Objetivo</td>
+<td>Obtener la constancia del período lectivo correspondiente.</td>
+</tr>
+<tr>
+<td>Tarea</td>
+<td>Localizar la constancia, comprobar sus datos y descargarla.</td>
+</tr>
+<tr>
+<td>Solución propuesta</td>
+<td>Un acceso directo desde «Mis documentos».</td>
+</tr>
+<tr>
+<td>Restricción</td>
+<td>El documento puede no estar emitido o requerir autorización.</td>
+</tr>
+<tr>
+<td>Resultado esperado</td>
+<td>Archivo correcto, identificable, disponible y comprensible.</td>
+</tr>
+</tbody>
+</table></div>
+<p>El error frecuente consiste en redactar la necesidad como una solución («necesitamos un botón azul en Inicio»). Esa frase no explica el objetivo, el problema real ni por qué la ubicación y el color serían adecuados.</p>
+<p><strong>Reformulación útil:</strong> «Las familias necesitan acceder a su constancia sin contactar a soporte. Queremos comprobar si un acceso identificado en la sección de documentos reduce los intentos fallidos y las consultas de ayuda, sin comprometer privacidad ni exactitud». Es una hipótesis de trabajo mejor formulada, no una mejora todavía demostrada.</p>
+<h2 id="1-9-caso-practico-completo-encontrar-y-consultar-una-constancia">1.9. Caso práctico completo: encontrar y consultar una constancia</h2>
+<h3 id="escenario">Escenario</h3>
+<p>Una persona representante accede desde un teléfono de gama media, con una conexión variable. Su objetivo es consultar el estado de su constancia de matrícula correspondiente al período actual. No conoce el nombre interno del módulo donde el equipo desarrollador almacenó el recurso.</p>
+<h3 id="alternativa-a-organizada-desde-la-logica-interna">Alternativa A: organizada desde la lógica interna</h3>
+<p>La navegación presenta «Servicios» → «Gestión» → «Recursos» → «Emisión». Al completar el recorrido aparece la leyenda «Proceso exitoso» y un botón «Aceptar». La pantalla carece de nombre del documento, período y una acción clara para continuar.</p>
+<p>Es un <strong>ejemplo inventado de diseño problemático</strong>, no una evaluación real de una plataforma. Los riesgos de esta propuesta son: terminología ambigua, exceso de exploración, incertidumbre acerca del resultado y dificultad para reconocer si se completó la tarea.</p>
+<h3 id="alternativa-b-organizada-alrededor-de-la-tarea">Alternativa B: organizada alrededor de la tarea</h3>
+<p>Una sección «Mis documentos» muestra «Constancia de matrícula», el período correspondiente y un estado explícito. Cuando el documento está disponible, presenta «Ver constancia». Si no está listo, comunica «Pendiente de emisión» y ofrece una explicación o un canal de seguimiento adecuado. Se preserva el contexto del documento después de regresar desde el detalle.</p>
+<p>Esta alternativa expresa mejor la tarea, pero sigue siendo <strong>una hipótesis de diseño</strong>, no una garantía de que funcionará. Su éxito depende de que las familias entiendan el término, encuentren la sección, reconozcan el período y reciban información correcta del backend.</p>
+<h3 id="comparacion">Comparación</h3>
+<div aria-label="Tabla desplazable horizontalmente" class="table-scroller" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th>Aspecto</th>
+<th>Alternativa A</th>
+<th>Alternativa B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lenguaje</td>
+<td>Nombres internos y genéricos</td>
+<td>Nombre de documento reconocible</td>
+</tr>
+<tr>
+<td>Orientación</td>
+<td>Recorrido de varias secciones</td>
+<td>Categoría asociada con la tarea</td>
+</tr>
+<tr>
+<td>Estado</td>
+<td>«Proceso exitoso» ambiguo</td>
+<td>Disponible / pendiente / error con significado</td>
+</tr>
+<tr>
+<td>Identificación</td>
+<td>Documento o período omitidos</td>
+<td>Documento y período visibles</td>
+</tr>
+<tr>
+<td>Recuperación</td>
+<td>Continuación incierta</td>
+<td>Acción o explicación contextual</td>
+</tr>
+<tr>
+<td>Evidencia faltante</td>
+<td>No se ha probado con usuarios</td>
+<td>Tampoco se ha probado todavía</td>
+</tr>
+</tbody>
+</table></div>
+<p>Abre <code>ejemplos/comparacion-ui-ux.html</code> para explorar una comparación visual local y funcional. El ejemplo está deliberadamente simplificado y <strong>no consulta una API</strong>.</p>
+<h3 id="como-comprobar-la-hipotesis">Cómo comprobar la hipótesis</h3>
+<p>Define una tarea neutral: «Encuentra la constancia de matrícula correspondiente al período 2026–2027 e indica su estado». No digas a los participantes «haz clic en Mis documentos», porque eso revelaría la solución.</p>
+<p>Registra si se llega al documento correcto sin ayuda, tiempo por tarea con un criterio uniforme, errores de interpretación, pasos inesperados y comentarios. Incluye usuarios ocasionales y al menos escenarios relevantes de accesibilidad. Compara alternativas de forma controlada cuando el tamaño y el método de investigación lo permitan. No declares una «mejora del 40 %» sin datos reales y un denominador verificable.</p>
+<h2 id="1-10-del-diseno-a-la-implementacion-la-semantica-importa">1.10. Del diseño a la implementación: la semántica importa</h2>
+<p>Es útil mostrar desde este capítulo que diseño e ingeniería se afectan mutuamente. El siguiente fragmento utiliza elementos HTML nativos y nombres de acciones explícitos:</p>
+<div class="code-block"><button aria-label="Copiar fragmento de código" class="copy-code" type="button">Copiar código</button><pre><code class="language-html">&lt;section aria-labelledby="documents-title"&gt;
+  &lt;h2 id="documents-title"&gt;Mis documentos&lt;/h2&gt;
+
+  &lt;article aria-labelledby="enrollment-title"&gt;
+    &lt;h3 id="enrollment-title"&gt;Constancia de matrícula&lt;/h3&gt;
+    &lt;p&gt;Período lectivo 2026–2027&lt;/p&gt;
+    &lt;p&gt;Estado: disponible&lt;/p&gt;
+    &lt;a href="/documentos/constancia-matricula"&gt;
+      Ver constancia de matrícula
+    &lt;/a&gt;
+  &lt;/article&gt;
+&lt;/section&gt;
+</code></pre></div>
+<p><strong>Qué hace bien este ejemplo:</strong> establece títulos reconocibles, comunica el período y el estado mediante texto, y utiliza un enlace para acceder a otro recurso. <strong>Qué no garantiza:</strong> que la ruta exista, que el documento corresponda a la persona autenticada, que la respuesta del servidor sea segura, que haya manejo de errores o que el estilo final satisfaga todos los criterios de accesibilidad. Estos aspectos se diseñan y verifican por separado.</p>
+<p><strong>[GUÍA]</strong> Usar elementos HTML semánticos de forma apropiada favorece una representación comprensible para el navegador y las tecnologías asistivas. Para los campos de entrada, por ejemplo, MDN señala que <code>placeholder</code> no sustituye a la etiqueta <code>label</code>, porque desaparece y puede no ser anunciado adecuadamente [F7]. Este asunto se desarrollará en el capítulo 16.</p>
+<h3 id="una-representacion-equivalente-en-flutter">Una representación equivalente en Flutter</h3>
+<p>La siguiente variante reducida utiliza un elemento de lista para comunicar el estado y navegar al detalle mediante <code>Navigator</code>. El archivo <code>ejemplos/main.dart</code> desarrolla el mismo caso con una tarjeta y un selector de estados; no se ha ejecutado en este entorno.</p>
+<div class="code-block"><button aria-label="Copiar fragmento de código" class="copy-code" type="button">Copiar código</button><pre><code class="language-dart">ListTile(
+  title: const Text('Constancia de matrícula'),
+  subtitle: const Text(
+    'Período 2026–2027 · Disponible',
+  ),
+  trailing: const Icon(Icons.chevron_right),
+  onTap: () {
+    Navigator.of(context).push(
+      MaterialPageRoute&lt;void&gt;(
+        builder: (_) =&gt; const DocumentDetailPage(),
+      ),
+    );
+  },
+)
+</code></pre></div>
+<p>El ejemplo supone que <code>DocumentDetailPage</code> existe y que el estado procede de datos fiables. En el archivo completo se proporciona una implementación mínima ejecutable. En una aplicación real también se comprobarían autorización, estados de espera, fallo, disponibilidad, foco y navegación accesible.</p>
+<h2 id="1-11-no-hay-un-diseno-mejor-sin-un-contexto-definido">1.11. No hay un diseño «mejor» sin un contexto definido</h2>
+<p>Considera dos perfiles:</p>
+<p><strong>Perfil 1. Usuario ocasional.</strong> Ingresa una vez al año para completar una matrícula. Necesita acciones reconocibles, instrucciones claras y señales de progreso. La memorización de rutas resulta poco útil porque transcurre demasiado tiempo entre sesiones.</p>
+<p><strong>Perfil 2. Operador habitual.</strong> Trabaja cada día registrando cientos de movimientos. Puede necesitar atajos de teclado, navegación eficiente entre campos y una alta densidad de información. El exceso de confirmaciones podría ralentizarlo, aunque operaciones irreversibles continúan requiriendo controles adecuados al riesgo.</p>
+<p>Una navegación minimalista puede ser apropiada para la primera persona y poco eficiente para la segunda. Esto no significa que deban existir dos productos completamente distintos, sino que las decisiones deben considerar tareas, frecuencia, riesgos, tecnología y capacidades.</p>
+<p>En software educativo, sanitario o financiero, un error no es solo una molestia estética. Puede afectar trámites, decisiones o datos importantes. Cuanto mayor sea el impacto de una operación equivocada, mayor debe ser la atención prestada a prevención, claridad, confirmación y recuperación.</p>
+<h3 id="trade-offs-decisiones-con-costos">Trade-offs: decisiones con costos</h3>
+<p>Una interfaz visualmente simple puede ocultar opciones y exigir mayor exploración. Una interfaz densa puede acelerar el trabajo experto y dificultar el primer uso. Las animaciones pueden ayudar a comunicar continuidad, pero también distraer o afectar a personas sensibles al movimiento. Mostrar confirmaciones puede prevenir acciones peligrosas, pero interrumpir innecesariamente tareas seguras y repetitivas.</p>
+<p>Por ello este manual no aplicará «menos es más» como un mandato absoluto. La regla será: <strong>eliminar complejidad que no aporta valor, sin ocultar información o controles que sí resultan necesarios para completar la tarea</strong>.</p>
+<h2 id="1-12-primer-procedimiento-de-diagnostico-ui-ux">1.12. Primer procedimiento de diagnóstico UI/UX</h2>
+<p>Antes de modificar una pantalla existente, realiza un diagnóstico breve basado en una tarea real:</p>
+<ol>
+<li><strong>Identifica a la persona y su objetivo:</strong> quién necesita hacer qué y por qué.</li>
+<li><strong>Especifica el contexto:</strong> dispositivo, frecuencia, experiencia, conectividad, idioma, accesibilidad y posibles consecuencias de fallar.</li>
+<li><strong>Recorre la tarea de principio a fin:</strong> incluye entrada, ejecución, espera, fallos, resultado y regreso.</li>
+<li><strong>Separa síntomas y causas posibles:</strong> «tardan en encontrarlo» no prueba que el color sea inadecuado; puede ser un problema de estructura o terminología.</li>
+<li><strong>Registra hipótesis y evidencia:</strong> distingue lo observado de lo que sospechas.</li>
+<li><strong>Propón la mínima intervención razonable:</strong> modifica el componente, la estructura o el comportamiento que realmente origina el problema.</li>
+<li><strong>Define cómo se comprobará:</strong> éxito, tiempo, errores, comprensión, accesibilidad y efectos no deseados.</li>
+</ol>
+<p>No todos los proyectos requieren el mismo volumen de investigación, pero todos deberían conservar una explicación verificable de por qué se decidió cambiar algo.</p>
+<h2 id="1-13-ejercicio-de-aplicacion">1.13. Ejercicio de aplicación</h2>
+<p><strong>Situación:</strong> una app muestra un botón llamado «Procesar» al final de un formulario. Tras pulsarlo, aparece un indicador de carga durante varios segundos y luego la pantalla se cierra. El usuario no sabe si la solicitud se registró y a veces vuelve a enviarla.</p>
+<p><strong>Tu trabajo:</strong> identifica el objetivo de la persona; enumera al menos tres explicaciones posibles del problema; distingue qué pertenece a UI, interacción, UX e ingeniería; plantea una mejora sin suponer que la petición se completó; especifica al menos dos pruebas para evaluar el resultado.</p>
+<h3 id="una-solucion-orientativa">Una solución orientativa</h3>
+<p>El objetivo no es «presionar Procesar», sino registrar una solicitud correctamente y conocer su estado. Una posible mejora incluye un nombre de acción explícito, prevención de envíos duplicados mientras la operación está pendiente, resultado confirmado por la respuesta fiable del servidor y un identificador o mecanismo de seguimiento. Si la conexión falla, el sistema debe diferenciar «no enviado», «estado desconocido» y «registrado» según la evidencia disponible.</p>
+<p>Esta propuesta no justifica mostrar «Solicitud enviada» antes de confirmar que el servidor la recibió. Tampoco resuelve por sí sola idempotencia, persistencia y seguridad, que pertenecen a la implementación integral del proceso.</p>
+<h2 id="1-14-lista-de-verificacion-del-capitulo">1.14. Lista de verificación del capítulo</h2>
+<p>Al concluir, comprueba que puedes responder con ejemplos propios:</p>
+<ul>
+<li>¿En qué difieren UI, UX, HCI, usabilidad y accesibilidad?</li>
+<li>¿Por qué una interfaz bonita puede resultar poco útil?</li>
+<li>¿Qué papel cumplen usuario, objetivo y contexto en la definición de usabilidad?</li>
+<li>¿Cómo distingues necesidad, tarea, solución y restricción?</li>
+<li>¿Por qué un estudio con ocho personas no equivale a una afirmación universal?</li>
+<li>¿Qué debe mostrar el sistema cuando una operación está pendiente o falla?</li>
+<li>¿Cómo explicas una decisión de diseño sin basarte solo en preferencias estéticas?</li>
+</ul>
+<p><strong>Criterio de dominio:</strong> formular un diagnóstico del caso práctico con una hipótesis explícita, una propuesta justificable y un modo razonable de evaluarla.</p>
+<h2 id="1-15-relaciones-con-los-capitulos-siguientes">1.15. Relaciones con los capítulos siguientes</h2>
+<ul>
+<li><strong>Capítulo 02 — Investigación de usuarios:</strong> cómo obtener evidencia sobre personas, tareas y expectativas sin inventarlas.</li>
+<li><strong>Capítulo 03 — Modelos mentales y arquitectura de información:</strong> por qué algunas rutas y etiquetas resultan reconocibles y otras no.</li>
+<li><strong>Capítulo 04 — Psicología cognitiva:</strong> qué mecanismos explican la atención, la decisión y el esfuerzo mental.</li>
+<li><strong>Capítulo 05 — Heurísticas:</strong> cómo inspeccionar sistemáticamente posibles problemas de interacción.</li>
+<li><strong>Capítulo 06 — Accesibilidad:</strong> cómo diseñar y comprobar que distintas personas pueden usar el producto.</li>
+</ul>
+<hr/>
+<h1 class="chapter-heading" id="referencias-verificadas-de-esta-entrega">Referencias verificadas de esta entrega</h1>
+<p><strong>[F1]</strong> Don Norman y Jakob Nielsen. <em>The Definition of User Experience (UX).</em> Nielsen Norman Group. <a href="https://www.nngroup.com/articles/definition-user-experience/" rel="noopener noreferrer" target="_blank">https://www.nngroup.com/articles/definition-user-experience/</a></p>
+<p><strong>[F2]</strong> Kate Kaplan. <em>What Is User Experience (and What Is It Not)?</em> Nielsen Norman Group, 2024. <a href="https://www.nngroup.com/articles/what-is-user-experience/" rel="noopener noreferrer" target="_blank">https://www.nngroup.com/articles/what-is-user-experience/</a></p>
+<p><strong>[F3]</strong> ISO. <em>ISO 9241-11:2018 — Ergonomics of human-system interaction — Part 11: Usability: Definitions and concepts.</em> Ficha oficial; revisión y confirmación en 2023. <a href="https://www.iso.org/standard/63500.html" rel="noopener noreferrer" target="_blank">https://www.iso.org/standard/63500.html</a></p>
+<p><strong>[F4]</strong> Jakob Nielsen. <em>Usability 101: Introduction to Usability.</em> Nielsen Norman Group, 2012; revisión de 2026. <a href="https://www.nngroup.com/articles/usability-101-introduction-to-usability/" rel="noopener noreferrer" target="_blank">https://www.nngroup.com/articles/usability-101-introduction-to-usability/</a></p>
+<p><strong>[F5]</strong> W3C WAI. <em>Accessibility, Usability, and Inclusion.</em> <a href="https://www.w3.org/WAI/fundamentals/accessibility-usability-inclusion/" rel="noopener noreferrer" target="_blank">https://www.w3.org/WAI/fundamentals/accessibility-usability-inclusion/</a></p>
+<p><strong>[F6]</strong> W3C. <em>Web Content Accessibility Guidelines (WCAG) 2.2.</em> <a href="https://www.w3.org/TR/WCAG22/" rel="noopener noreferrer" target="_blank">https://www.w3.org/TR/WCAG22/</a></p>
+<p><strong>[F7]</strong> MDN Web Docs. <em>HTML placeholder attribute.</em> <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/placeholder" rel="noopener noreferrer" target="_blank">https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/placeholder</a></p>
+<p><strong>[F8]</strong> ISO. <em>ISO 9241-210:2019 — Human-centred design for interactive systems.</em> Ficha oficial; revisión y confirmación en 2025. <a href="https://www.iso.org/standard/77520.html" rel="noopener noreferrer" target="_blank">https://www.iso.org/standard/77520.html</a></p>
+<p><strong>[F9]</strong> NIST. <em>Human Centered Design (HCD).</em> <a href="https://www.nist.gov/itl/iad/human-centered-technologies/human-factors-human-centered-design" rel="noopener noreferrer" target="_blank">https://www.nist.gov/itl/iad/human-centered-technologies/human-factors-human-centered-design</a></p>
+<p><strong>[F10]</strong> Jakob Nielsen. <em>10 Usability Heuristics for User Interface Design.</em> Nielsen Norman Group, 1994; revisión de 2024. <a href="https://www.nngroup.com/articles/ten-usability-heuristics/" rel="noopener noreferrer" target="_blank">https://www.nngroup.com/articles/ten-usability-heuristics/</a></p>
+<p><strong>Observación editorial:</strong> Las referencias están ligadas al contenido de esta entrega. En próximos capítulos se citarán fuentes especializadas adicionales y se consignarán versiones de plataformas o componentes cuando puedan afectar una implementación.</p>
+<hr/>
+<p><strong>Fin del Capítulo 01 (primera entrega).</strong></p>
+</article><div class="end-note"><span class="eyebrow">SIGUIENTE PASO</span><a class="next-link" href="02.html"><span>Siguiente capítulo</span><strong>02. Investigación de usuarios →</strong></a></div><footer class="reader-footer">Manual UI/UX · Versión de trabajo 0.3 · 3 de 36 capítulos disponibles</footer></main>
+<aside class="reader-outline" aria-label="En esta página"><div class="outline-inner"><div class="outline-heading">EN ESTA PÁGINA</div><nav><a class="outline-item level-2" href="#1-1-el-error-de-empezar-por-la-pantalla">1.1. El error de empezar por la pantalla</a><a class="outline-item level-3" href="#un-mismo-problema-visto-desde-varias-disciplinas">Un mismo problema visto desde varias disciplinas</a><a class="outline-item level-2" href="#1-2-que-es-una-interfaz-de-usuario-ui">1.2. Qué es una interfaz de usuario (UI)</a><a class="outline-item level-2" href="#1-3-que-es-la-experiencia-de-usuario-ux">1.3. Qué es la experiencia de usuario (UX)</a><a class="outline-item level-3" href="#ux-como-experiencia-y-ux-como-disciplina">UX como experiencia y UX como disciplina</a><a class="outline-item level-2" href="#1-4-que-es-hci-y-como-se-vincula-con-ui-ux">1.4. Qué es HCI y cómo se vincula con UI/UX</a><a class="outline-item level-2" href="#1-5-usabilidad-eficaz-eficiente-y-satisfactoria-para-quien-y-en-que-contexto">1.5. Usabilidad: eficaz, eficiente y satisfactoria para quién y en qué contexto</a><a class="outline-item level-3" href="#ejemplo-de-metricas">Ejemplo de métricas</a><a class="outline-item level-3" href="#cinco-atributos-utiles-sin-confundirlos-con-la-definicion-iso">Cinco atributos útiles, sin confundirlos con la definición ISO</a><a class="outline-item level-2" href="#1-6-accesibilidad-inclusion-y-usabilidad-relacion-sin-equivalencias-falsas">1.6. Accesibilidad, inclusión y usabilidad: relación sin equivalencias falsas</a><a class="outline-item level-2" href="#1-7-arquitectura-de-informacion-interaccion-visual-y-contenido">1.7. Arquitectura de información, interacción, visual y contenido</a><a class="outline-item level-2" href="#1-8-objetivos-tareas-soluciones-y-restricciones">1.8. Objetivos, tareas, soluciones y restricciones</a><a class="outline-item level-2" href="#1-9-caso-practico-completo-encontrar-y-consultar-una-constancia">1.9. Caso práctico completo: encontrar y consultar una constancia</a><a class="outline-item level-3" href="#escenario">Escenario</a><a class="outline-item level-3" href="#alternativa-a-organizada-desde-la-logica-interna">Alternativa A: organizada desde la lógica interna</a><a class="outline-item level-3" href="#alternativa-b-organizada-alrededor-de-la-tarea">Alternativa B: organizada alrededor de la tarea</a><a class="outline-item level-3" href="#comparacion">Comparación</a><a class="outline-item level-3" href="#como-comprobar-la-hipotesis">Cómo comprobar la hipótesis</a><a class="outline-item level-2" href="#1-10-del-diseno-a-la-implementacion-la-semantica-importa">1.10. Del diseño a la implementación: la semántica importa</a><a class="outline-item level-3" href="#una-representacion-equivalente-en-flutter">Una representación equivalente en Flutter</a><a class="outline-item level-2" href="#1-11-no-hay-un-diseno-mejor-sin-un-contexto-definido">1.11. No hay un diseño «mejor» sin un contexto definido</a><a class="outline-item level-3" href="#trade-offs-decisiones-con-costos">Trade-offs: decisiones con costos</a><a class="outline-item level-2" href="#1-12-primer-procedimiento-de-diagnostico-ui-ux">1.12. Primer procedimiento de diagnóstico UI/UX</a><a class="outline-item level-2" href="#1-13-ejercicio-de-aplicacion">1.13. Ejercicio de aplicación</a><a class="outline-item level-3" href="#una-solucion-orientativa">Una solución orientativa</a><a class="outline-item level-2" href="#1-14-lista-de-verificacion-del-capitulo">1.14. Lista de verificación del capítulo</a><a class="outline-item level-2" href="#1-15-relaciones-con-los-capitulos-siguientes">1.15. Relaciones con los capítulos siguientes</a></nav><div class="outline-download"><p>¿Prefieres leer sin conexión?</p><a href="../pdf/capitulo-01.pdf" download>Descargar PDF ↗</a></div></div></aside></div><div class="overlay" id="nav-overlay"></div><script src="../assets/site.js" defer></script></body></html>

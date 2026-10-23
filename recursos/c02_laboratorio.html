@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Laboratorio — Investigación de usuarios · Capítulo 02</title>
+  <style>
+    :root { font-family: system-ui,-apple-system,'Segoe UI',sans-serif; color-scheme: light; --ink:#14263d; --muted:#53657a; --line:#cedbe8; --blue:#175cac; --bg:#f3f7fb; --focus:#b55d00; }
+    * { box-sizing:border-box } body { margin:0; background:var(--bg); color:var(--ink); line-height:1.55 }
+    a { color:var(--blue) } .wrap { max-width:1060px; margin:auto; padding:24px 18px 80px }
+    header { background:linear-gradient(115deg,#0a345f,#175cac);color:#fff;border-radius:20px;padding:34px }
+    header small { opacity:.88; letter-spacing:.06em; text-transform:uppercase } h1 { line-height:1.12;font-size:clamp(1.7rem,4vw,2.8rem);margin:10px 0 } header p {max-width:73ch}
+    h2 { font-size:1.4rem;line-height:1.25 } h3 {font-size:1.06rem} .card { background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;margin-top:18px;box-shadow:0 5px 14px #0923410b }
+    .muted {color:var(--muted)} .eyebrow {font-size:.78rem;letter-spacing:.06em;font-weight:750;text-transform:uppercase;color:var(--blue)}
+    .tabs { display:flex;flex-wrap:wrap;gap:8px;margin-top:20px } button,select { font:inherit }
+    .tabs button,.choice,.action {border:1px solid #9eb7d0;border-radius:10px;padding:11px 16px;background:#fff;color:var(--ink);cursor:pointer}
+    .tabs button[aria-selected=true] {background:var(--blue);border-color:var(--blue);color:#fff;font-weight:700} button:hover { border-color:var(--blue) }
+    :focus-visible {outline:3px solid var(--focus);outline-offset:3px} .panel[hidden], [hidden] {display:none!important}
+    .grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.evidence {border-left:4px solid var(--blue);padding:10px 15px;background:#f1f7ff;border-radius:8px}
+    label {font-weight:650;display:block;margin:12px 0 7px} select {width:min(100%,630px);padding:12px;border:1px solid #7188a1;border-radius:8px;background:#fff;color:var(--ink)}
+    .action {margin-top:12px;background:var(--blue);border-color:var(--blue);color:#fff;font-weight:700}
+    .feedback {background:#f2f6fa;padding:14px 18px;border-left:4px solid var(--blue);border-radius:8px;margin-top:15px;min-height:45px}
+    .comparison {display:grid;grid-template-columns:1fr 1fr;gap:14px}.mini {padding:18px;background:#f7f9fc;border:1px solid var(--line);border-radius:12px}
+    .mock {display:block;background:#fff;border:1px solid #b6c9da;padding:9px 12px;border-radius:8px;margin:9px 0;font-size:.9rem}
+    .tag {display:inline-block;border:1px solid #a6bad0;border-radius:999px;padding:2px 10px;font-size:.78rem;color:#27435e}
+    .choice {display:block;text-align:left;width:100%;margin:10px 0} .choice:focus,.choice:hover {background:#eff6ff}
+    footer{margin:26px 0;color:var(--muted);font-size:.91rem} @media(max-width:660px){.grid,.comparison{grid-template-columns:1fr}.card{padding:18px}header{padding:25px}}
+    @media(prefers-reduced-motion:no-preference){button {transition:background .12s ease, border-color .12s ease}}
+  </style>
+</head>
+<body>
+<main class="wrap">
+  <header>
+    <small>Manual integral de UI/UX · Capítulo 02</small>
+    <h1>Laboratorio de investigación de usuarios</h1>
+    <p>Un caso hipotético sobre descarga de constancias. Practica cuatro decisiones: definir el problema, elegir un método, interpretar evidencia y evaluar una propuesta. Todos los participantes y datos son ficticios.</p>
+  </header>
+  <nav class="tabs" role="tablist" aria-label="Etapas del laboratorio">
+    <button type="button" role="tab" id="tab-problema" aria-controls="panel-problema" aria-selected="true" tabindex="0">1. Problema</button>
+    <button type="button" role="tab" id="tab-metodo" aria-controls="panel-metodo" aria-selected="false" tabindex="-1">2. Método</button>
+    <button type="button" role="tab" id="tab-evidencia" aria-controls="panel-evidencia" aria-selected="false" tabindex="-1">3. Evidencia</button>
+    <button type="button" role="tab" id="tab-accion" aria-controls="panel-accion" aria-selected="false" tabindex="-1">4. Acción</button>
+  </nav>
+
+  <section class="card panel" id="panel-problema" role="tabpanel" aria-labelledby="tab-problema">
+    <div class="eyebrow">De una solicitud a preguntas investigables</div>
+    <h2>«Agrega un botón para descargar certificados»</h2>
+    <p>Una solicitud de producto propone una solución. Todavía no establece qué causa impide que las familias consigan el documento.</p>
+    <div class="grid">
+      <div class="mini"><strong>Solución solicitada</strong><p>Botón más grande en el inicio.</p><span class="tag">Sin validar</span></div>
+      <div class="mini"><strong>Objetivo de la persona</strong><p>Obtener el documento correcto para presentar un trámite.</p><span class="tag">Objetivo supuesto</span></div>
+    </div>
+    <h3>Hipótesis alternativas</h3>
+    <div class="grid"><div class="evidence">H1 · No reconoce el nombre del menú.</div><div class="evidence">H2 · El documento todavía no está disponible.</div><div class="evidence">H3 · El documento se descarga, pero no se encuentra.</div><div class="evidence">H4 · Hay restricciones de permisos o cuenta.</div></div>
+    <p class="muted">Antes de implementar, pregunta: ¿cuál de estas explicaciones se sostiene con evidencia?</p>
+  </section>
+
+  <section class="card panel" id="panel-metodo" role="tabpanel" aria-labelledby="tab-metodo" hidden>
+    <div class="eyebrow">Selección de técnicas</div>
+    <h2>Elige un método a partir de la pregunta</h2>
+    <p>Una buena técnica depende de lo que necesitas aprender. Cambia la pregunta y revisa la recomendación.</p>
+    <label for="pregunta">¿Qué necesitamos saber?</label>
+    <select id="pregunta">
+      <option value="0">¿Por qué las personas se confunden al buscar un documento?</option>
+      <option value="1">¿Qué hacen en la vida real cuando necesitan la constancia?</option>
+      <option value="2">¿Qué proporción de la población completa la tarea?</option>
+      <option value="3">¿Cómo usa el formulario una persona con lector de pantalla?</option>
+    </select>
+    <label for="metodo">¿Qué método priorizarías?</label>
+    <select id="metodo">
+      <option value="entrevista">Entrevistas sobre experiencias recientes</option>
+      <option value="contextual">Observación contextual</option>
+      <option value="cuantitativo">Estudio cuantitativo con muestra y métricas definidas</option>
+      <option value="accesible">Prueba con tecnología asistiva y auditoría WCAG</option>
+      <option value="opinion">Preguntar qué color de botón prefieren</option>
+    </select>
+    <button class="action" id="revisarMetodo" type="button">Revisar elección</button>
+    <div class="feedback" id="feedbackMetodo" aria-live="polite">Selecciona una pregunta y un método.</div>
+  </section>
+
+  <section class="card panel" id="panel-evidencia" role="tabpanel" aria-labelledby="tab-evidencia" hidden>
+    <div class="eyebrow">Interpretación sin exageraciones</div>
+    <h2>¿Qué conclusión está respaldada?</h2>
+    <div class="grid">
+      <div class="evidence"><b>Participante P-01</b><p>Buscó en «Mis documentos».</p></div>
+      <div class="evidence"><b>Participante P-02</b><p>Buscó en «Mis documentos», luego pidió ayuda.</p></div>
+      <div class="evidence"><b>Participante P-03</b><p>Interpretó «Procesado» como «Disponible».</p></div>
+      <div class="evidence"><b>Participante P-04</b><p>Completó la tarea sin ayuda.</p></div>
+    </div>
+    <p><strong>Selecciona la afirmación más defendible:</strong></p>
+    <button class="choice" data-answer="no" type="button">A. El 75 % de todas las familias no entiende el sistema.</button>
+    <button class="choice" data-answer="yes" type="button">B. En esta simulación aparecieron problemas distintos de localización y comprensión de estados; conviene estudiarlos por separado.</button>
+    <button class="choice" data-answer="no" type="button">C. El problema se resolverá definitivamente agregando un botón al inicio.</button>
+    <div class="feedback" id="feedbackEvidencia" aria-live="polite">Elige una afirmación para revisar sus límites.</div>
+  </section>
+
+  <section class="card panel" id="panel-accion" role="tabpanel" aria-labelledby="tab-accion" hidden>
+    <div class="eyebrow">Propuesta y validación</div>
+    <h2>Una mejora es una hipótesis hasta que se evalúa</h2>
+    <p>Estas maquetas representan maneras distintas de organizar el acceso al documento. <strong>No se ha demostrado cuál funciona mejor.</strong></p>
+    <div class="comparison">
+      <div class="mini"><span class="tag">Versión A · Actual hipotética</span><h3>Servicios institucionales</h3><span class="mock">Recursos</span><span class="mock">Gestión</span><span class="mock">Solicitudes</span><p class="muted">El documento está disponible mediante una ruta poco explícita.</p></div>
+      <div class="mini"><span class="tag">Versión B · Alternativa a probar</span><h3>Mis documentos</h3><span class="mock"><strong>Constancia de matrícula</strong><br>Estado: Disponible</span><span class="mock">Otros certificados</span><p class="muted">La propuesta explicita documento y estado.</p></div>
+    </div>
+    <h3>Plan mínimo para contrastar</h3>
+    <p>Probar la localización de la constancia con tareas equivalentes, participantes pertinentes y condiciones documentadas. Registrar éxito sin ayuda, rutas, errores y comprensión del estado. Comprobar accesibilidad y permisos.</p>
+    <p><strong>Resultado posible:</strong> si la versión B facilita la localización pero muestra estados que no se corresponden con el backend, habrá que corregir ese problema antes de publicarla.</p>
+  </section>
+  <footer>Demostración educativa autónoma · No utiliza cookies, almacenamiento, servicios externos ni recopila datos. Contenido sintético · Versión 0.2</footer>
+</main>
+<script>
+(() => {
+  'use strict';
+  const tabs = [...document.querySelectorAll('[role="tab"]')];
+  const activate = (idx, focus = false) => {
+    tabs.forEach((tab, i) => {
+      const on = i === idx;
+      tab.setAttribute('aria-selected', String(on));
+      tab.tabIndex = on ? 0 : -1;
+      document.getElementById(tab.getAttribute('aria-controls')).hidden = !on;
+    });
+    if (focus) tabs[idx].focus();
+  };
+  tabs.forEach((tab, i) => {
+    tab.addEventListener('click', () => activate(i));
+    tab.addEventListener('keydown', e => {
+      if (!['ArrowLeft','ArrowRight','Home','End'].includes(e.key)) return;
+      e.preventDefault();
+      const next = e.key === 'Home' ? 0 : e.key === 'End' ? tabs.length - 1 : (i + (e.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length;
+      activate(next, true);
+    });
+  });
+  const correct = ['entrevista','contextual','cuantitativo','accesible'];
+  const descriptions = [
+    'Entrevistas sobre experiencias concretas ayudan a explorar explicaciones; después puede convenir observar tareas.',
+    'La observación contextual muestra herramientas externas y estrategias no declaradas.',
+    'Si necesitas proporciones poblacionales, define muestra, denominadores, criterios de éxito y márgenes de incertidumbre.',
+    'Necesitas participación de personas que usan tecnología asistiva y revisión técnica de accesibilidad.'
+  ];
+  document.getElementById('revisarMetodo').addEventListener('click', () => {
+    const i = Number(document.getElementById('pregunta').value);
+    const method = document.getElementById('metodo').value;
+    document.getElementById('feedbackMetodo').textContent = `${method === correct[i] ? 'Elección adecuada. ' : 'La elección no responde prioritariamente a esa pregunta. '} ${descriptions[i]}`;
+  });
+  document.querySelectorAll('[data-answer]').forEach(button => button.addEventListener('click', () => {
+    document.getElementById('feedbackEvidencia').textContent = button.dataset.answer === 'yes'
+      ? 'Correcto: la conclusión delimita el contexto, reconoce diferentes problemas y no generaliza resultados.'
+      : 'No sustentado: la muestra y las observaciones ficticias no permiten esa generalización ni demuestran una solución.';
+  }));
+})();
+</script>
+</body>
+</html>

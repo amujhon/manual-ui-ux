@@ -1,0 +1,415 @@
+<!doctype html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Manual integral de UI/UX: fundamentos, investigación, estándares, componentes e implementación. Lectura en línea y PDF gratuitos."><meta name="theme-color" content="#f9f9f6"><title>Capítulo 03 — Manual UI/UX</title><link rel="stylesheet" href="../assets/styles.css"></head><body class="reader-page"><a class="skip-link" href="#contenido">Saltar al contenido</a><header class="topbar">
+<a class="brand" href="../index.html" aria-label="Manual UI/UX, ir al inicio"><span class="brand-icon"><svg viewBox="0 0 42 42" width="40" height="40" aria-hidden="true"><rect x="1" y="1" width="40" height="40" rx="12" fill="currentColor"/><path d="M12 11v20m0-20 10 10-10 10m10-10 9-10m-9 10 9 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="brand-text">manual<span class="brand-period">.</span><small>UI / UX</small></span></a>
+<nav class="top-links" aria-label="Navegación principal"><a href="../index.html#indice" >Capítulos</a><a href="../introduccion.html" >Presentación</a><a href="../index.html#recursos">Recursos</a></nav>
+<div class="top-actions"><span class="version-pill">EDICIÓN 0.3</span><button class="icon-button theme-toggle" type="button" aria-label="Alternar modo oscuro" title="Cambiar tema"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg></button><button class="icon-button mobile-menu" type="button" aria-expanded="false" aria-controls="reader-sidebar" aria-label="Abrir índice"><svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button></div>
+</header><div class="reading-progress" aria-hidden="true"><span id="reading-progress"></span></div>
+<div class="reader-shell"><aside class="reader-sidebar" id="reader-sidebar" aria-label="Capítulos del manual"><div class="sidebar-heading">CONTENIDO DEL MANUAL</div><a class="intro-nav " href="../introduccion.html">↗ Presentación y guía de lectura</a><div class="sidebar-scroll"><div class="nav-group"><p class="nav-group-label">PARTE I <span>· Fundamentos y métodos</span></p><a class="nav-chapter " href="../capitulos/01.html" ><span class="chapter-num">01</span><span>Introducción a UI, UX y HCI</span></a><a class="nav-chapter " href="../capitulos/02.html" ><span class="chapter-num">02</span><span>Investigación de usuarios y diseño centrado en las personas</span></a><a class="nav-chapter is-current" href="../capitulos/03.html" aria-current=page><span class="chapter-num">03</span><span>Objetivos, tareas, modelos mentales y arquitectura de información</span></a><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">04</span><span>Psicología cognitiva y leyes aplicadas al diseño</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">05</span><span>Heurísticas y principios de interacción</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">06</span><span>Fundamentos de accesibilidad y diseño inclusivo</span><span class="small-dot" aria-hidden="true"></span></div></div><div class="nav-group"><p class="nav-group-label">PARTE II <span>· Lenguaje visual</span></p><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">07</span><span>Composición, percepción y jerarquía visual</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">08</span><span>Tipografía y legibilidad</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">09</span><span>Color, contraste y sistemas de temas</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">10</span><span>Espaciado, cuadrículas y layouts</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">11</span><span>Iconografía, imágenes e identidad visual</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">12</span><span>UX Writing y diseño de contenido</span><span class="small-dot" aria-hidden="true"></span></div></div><div class="nav-group"><p class="nav-group-label">PARTE III <span>· Componentes e interacción</span></p><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">13</span><span>Design Systems y Design Tokens</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">14</span><span>Anatomía y comportamiento de componentes interactivos</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">15</span><span>Botones, enlaces y controles de acción</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">16</span><span>Inputs y entrada de texto</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">17</span><span>Controles de selección y elección</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">18</span><span>Inputs especializados y captura avanzada</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">19</span><span>Estados, feedback, errores y animación</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">20</span><span>Diálogos, popovers, tooltips y notificaciones</span><span class="small-dot" aria-hidden="true"></span></div></div><div class="nav-group"><p class="nav-group-label">PARTE IV <span>· Patrones y experiencias</span></p><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">21</span><span>Navegación y orientación</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">22</span><span>Validaciones y recuperación de errores</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">23</span><span>Diseño integral de formularios</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">24</span><span>Formularios multipaso y flujos complejos</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">25</span><span>Búsqueda, filtrado y ordenamiento</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">26</span><span>Listas, tablas y datos densos</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">27</span><span>Visualización de datos y dashboards</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">28</span><span>Autenticación, permisos y consentimiento</span><span class="small-dot" aria-hidden="true"></span></div></div><div class="nav-group"><p class="nav-group-label">PARTE V <span>· Calidad transversal</span></p><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">29</span><span>Diseño responsive y adaptive</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">30</span><span>Convenciones de Android, iOS, web y escritorio</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">31</span><span>Accesibilidad avanzada y tecnologías asistivas</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">32</span><span>Rendimiento percibido, resiliencia, confianza y ética</span><span class="small-dot" aria-hidden="true"></span></div></div><div class="nav-group"><p class="nav-group-label">PARTE VI <span>· Implementación y evaluación</span></p><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">33</span><span>Wireframes, prototipos e investigación evaluativa</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">34</span><span>Implementación de UI/UX en la web</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">35</span><span>Implementación de UI/UX con Flutter</span><span class="small-dot" aria-hidden="true"></span></div><div class="nav-chapter is-pending" title="Capítulo aún no publicado"><span class="chapter-num">36</span><span>Auditoría, métricas y evolución del diseño</span><span class="small-dot" aria-hidden="true"></span></div></div></div></aside>
+<main id="contenido" class="reader-main"><div class="reader-crumb"><a href="../index.html">Manual UI/UX</a><span aria-hidden="true">/</span><span>Capítulo 03</span></div><div class="article-header"><span class="eyebrow">CAPÍTULO 03 DE 36</span><div class="reader-title"><h1>Objetivos, tareas, modelos mentales y arquitectura de información</h1></div><div class="article-meta"><span>2,665 palabras</span><span class="meta-sep"></span><span>13 min de lectura aprox.</span><span class="meta-sep"></span><span>Publicado · v0.3</span></div><div class="chapter-tools"><a class="pill-action" href="../pdf/capitulo-03.pdf" download><span aria-hidden="true">↓</span> PDF</a><a class="pill-action" href="../fuentes/capitulo-03.md" download>Markdown</a></div></div><div class="practical-panel"><div class="practical-icon">↗</div><div><strong>Laboratorio del capítulo 03</strong><p>Comparar árboles de navegación.</p><div class="practical-links"><a href="../recursos/c03_arboles.html">Abrir laboratorio ↗</a></div></div></div><article class="prose" data-article><h1 class="chapter-heading" id="capitulo-03-objetivos-tareas-modelos-mentales-y-arquitectura-de-informacion">Capítulo 03. Objetivos, tareas, modelos mentales y arquitectura de información</h1>
+<blockquote>
+<p><strong>Parte I · Fundamentos científicos y metodológicos.</strong> Prerrequisitos: capítulos 01 y 02. Continúa en los capítulos 04, 21, 24 y 25. Los ejemplos de esta entrega son ficticios: representan hipótesis de diseño, no resultados de investigación con usuarios.</p>
+</blockquote>
+<h2 id="3-1-proposito-y-objetivos">3.1. Propósito y objetivos</h2>
+<p>El capítulo 02 enseñó a investigar personas, contextos y comportamientos. Ahora convertiremos esa evidencia en estructuras y recorridos que permitan lograr objetivos. La pregunta central no es «¿dónde pongo el botón?», sino «¿qué espera lograr la persona, cómo busca hacerlo y qué organización le ayudará a encontrar el camino?». Al finalizar podrás construir modelos de tareas, distinguir modelos mentales y modelos técnicos, proponer una arquitectura de información (IA) y evaluarla mediante <em>card sorting</em> y <em>tree testing</em>.</p>
+<p><strong>Caso conductor:</strong> un representante necesita descargar una constancia de matrícula para presentarla fuera de la institución. El sistema la ubica en «Trámites institucionales → Gestión documental → Certificaciones». ¿Es comprensible? No podemos contestar sin investigar quién la busca, qué términos reconoce y qué rutas intenta.</p>
+<h2 id="3-2-necesidades-objetivos-tareas-operaciones-y-funcionalidades">3.2. Necesidades, objetivos, tareas, operaciones y funcionalidades</h2>
+<div aria-label="Tabla desplazable horizontalmente" class="table-scroller" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th>Concepto</th>
+<th>Pregunta</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Necesidad</td>
+<td>¿Por qué necesita resolverlo?</td>
+<td>Demostrar ante un tercero que el estudiante está matriculado.</td>
+</tr>
+<tr>
+<td>Objetivo</td>
+<td>¿Qué resultado desea?</td>
+<td>Obtener una constancia válida del periodo vigente.</td>
+</tr>
+<tr>
+<td>Tarea</td>
+<td>¿Qué debe hacer?</td>
+<td>Encontrar, comprobar y obtener el documento.</td>
+</tr>
+<tr>
+<td>Operación</td>
+<td>¿Qué paso concreto realiza?</td>
+<td>Elegir al estudiante o el periodo.</td>
+</tr>
+<tr>
+<td>Funcionalidad</td>
+<td>¿Qué capacidad ofrece el sistema?</td>
+<td>Generar y descargar un PDF.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Una solicitud como «agrega un botón de certificado» describe una solución deseada, <strong>no necesariamente el problema real</strong>. Quizá el documento ya existe y falla su localización; quizá se encuentra pero no se genera; quizá las personas desconocen su denominación. La investigación de necesidades propuesta en el manual de servicios de GOV.UK exige comprender el resultado deseado antes de definir una interfaz [F01].</p>
+<p><strong>Criterio de aceptación inicial:</strong> una persona autorizada puede localizar y obtener un documento correspondiente al estudiante y periodo correctos, sin ayuda externa, cuando el documento está disponible. Este criterio evita decidir prematuramente el diseño del menú.</p>
+<h2 id="3-3-contexto-y-escenarios">3.3. Contexto y escenarios</h2>
+<p>Un recorrido útil depende del rol, frecuencia, equipo, permisos, conectividad y consecuencias del error. Alguien que descarga constancias diariamente puede reconocer el término «certificaciones». Un familiar que entra dos veces al año quizá busque «documentos de mi hijo». Ninguna clasificación única es necesariamente adecuada para ambos.</p>
+<p>Un escenario debe incluir actor, detonante, objetivo, información disponible, restricciones y resultado. Ejemplo hipotético: «Una representante con dos estudiantes utiliza un teléfono con internet inestable y necesita obtener hoy un comprobante vigente. No conoce el nombre técnico del documento». De ese escenario salen <strong>preguntas</strong>, no conclusiones: ¿cómo elige al estudiante?, ¿cómo identifica el periodo?, ¿qué ocurre cuando la descarga falla?</p>
+<h2 id="3-4-analisis-de-tareas-y-hta">3.4. Análisis de tareas y HTA</h2>
+<p>El <em>task analysis</em> identifica los pasos y decisiones que intervienen en una actividad. Puede ser secuencial, cuando interesa el orden, o jerárquico (<em>Hierarchical Task Analysis</em>, HTA), cuando interesa dividir un objetivo en subtareas y describir un plan [F02].</p>
+<div class="code-block"><button aria-label="Copiar fragmento de código" class="copy-code" type="button">Copiar código</button><pre><code class="language-text">0. Obtener constancia de matrícula
+   1. Identificar estudiante
+      1.1 Acceder con cuenta autorizada
+      1.2 Elegir estudiante si hay varios
+   2. Localizar documento
+      2.1 Reconocer sección correspondiente
+      2.2 Elegir tipo de constancia
+   3. Verificar
+      3.1 Estudiante y periodo
+      3.2 Disponibilidad
+   4. Obtener documento
+      4.1 Descargar o visualizar
+      4.2 Comprobar que se puede utilizar
+PLAN: 1 → 2 → 3 → 4;
+      si no está disponible en 3.2, explicar situación.
+</code></pre></div>
+<p>El HTA <strong>no prescribe cuatro pantallas</strong>. Algunas subtareas pueden ser automáticas o presentarse en una sola vista. Una ficha de tarea debe conservar el objetivo, actores, frecuencia, entradas, bifurcaciones, errores, dependencias, resultado y fuente de evidencia. Cuando intervienen equipos o sistemas internos resulta útil complementar el HTA con un <em>service blueprint</em>.</p>
+<h2 id="3-5-modelos-mentales-y-expectativas">3.5. Modelos mentales y expectativas</h2>
+<p>Un modelo mental es la explicación que la persona construye acerca de cómo funciona un sistema y dónde debería encontrar sus elementos. Puede diferir del modelo conceptual del diseñador y de la arquitectura técnica [F03].</p>
+<div aria-label="Tabla desplazable horizontalmente" class="table-scroller" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th>Expectativa del usuario (hipotética)</th>
+<th>Estructura técnica</th>
+<th>Posible conflicto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>«Los documentos están dentro del perfil de mi hijo»</td>
+<td>Documentos en menú institucional</td>
+<td>No encuentra el punto de entrada.</td>
+</tr>
+<tr>
+<td>«Matrícula y constancia están relacionadas»</td>
+<td>Constancia en reportes generales</td>
+<td>Etiquetas incomprensibles.</td>
+</tr>
+<tr>
+<td>«Descargar significa obtener un archivo»</td>
+<td>Una tarea asíncrona inicia sin aviso</td>
+<td>Falta visibilidad del estado.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Cómo conocer estas expectativas: observar el primer lugar en que buscan, preguntar dónde esperarían encontrar algo, analizar el lenguaje espontáneo, registrar rutas fallidas y comparar agrupaciones de contenidos. Un solo usuario no representa todo el público. Si dos grupos usan vocabularios diferentes, considera entradas contextuales, etiquetas explicativas y accesos cruzados antes de forzar una taxonomía universal.</p>
+<h2 id="3-6-que-comprende-la-arquitectura-de-informacion">3.6. Qué comprende la arquitectura de información</h2>
+<p>La IA organiza, etiqueta y relaciona contenido para que pueda encontrarse y entenderse. Es más amplia que la barra de navegación: incluye inventarios, taxonomías, metadatos, jerarquías, rotulado y búsqueda [F04].</p>
+<div aria-label="Tabla desplazable horizontalmente" class="table-scroller" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th>Artefacto</th>
+<th>Función</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inventario</td>
+<td>Listar contenido real y responsables</td>
+<td>Constancias, notas, matrículas, recibos.</td>
+</tr>
+<tr>
+<td>Taxonomía</td>
+<td>Definir criterios de agrupación</td>
+<td>Documentos académicos / financieros.</td>
+</tr>
+<tr>
+<td>Rotulado</td>
+<td>Nombrar destinos de forma predecible</td>
+<td>«Constancia de matrícula».</td>
+</tr>
+<tr>
+<td>Jerarquía</td>
+<td>Mostrar relaciones</td>
+<td>Estudiante → Documentos → Constancia.</td>
+</tr>
+<tr>
+<td>Metadatos</td>
+<td>Filtrar y recuperar</td>
+<td>Estudiante, periodo, tipo, estado.</td>
+</tr>
+<tr>
+<td>Navegación</td>
+<td>Ofrecer recorridos visibles</td>
+<td>Enlaces, menú, migas de pan.</td>
+</tr>
+<tr>
+<td>Búsqueda</td>
+<td>Recuperar mediante términos</td>
+<td>«Constancia», «matrícula».</td>
+</tr>
+</tbody>
+</table></div>
+<p>La IA no debe copiar por defecto las tablas de la base de datos ni el organigrama institucional: ambos representan intereses técnicos y administrativos que pueden diferir de las tareas reales. Un mismo documento puede aparecer desde «Matrícula» y desde «Documentos» sin convertirse en dos documentos físicos distintos.</p>
+<h2 id="3-7-inventario-auditoria-y-taxonomia">3.7. Inventario, auditoría y taxonomía</h2>
+<p>Antes de reorganizar, registra cada destino: identificador, título visible, ruta, audiencia autorizada, responsable, vigencia, uso, términos equivalentes, enlaces y dependencias. Marca denominaciones ambiguas, duplicaciones y contenido abandonado.</p>
+<p>Ejemplo de auditoría ficticia:</p>
+<div aria-label="Tabla desplazable horizontalmente" class="table-scroller" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th>Elemento</th>
+<th>Título actual</th>
+<th>Problema hipotético</th>
+<th>Etiqueta candidata</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DOC-01</td>
+<td>Gestión documental</td>
+<td>Vago</td>
+<td>Documentos y constancias</td>
+</tr>
+<tr>
+<td>MAT-03</td>
+<td>Cert. matrícula</td>
+<td>Abreviado</td>
+<td>Constancia de matrícula</td>
+</tr>
+<tr>
+<td>ACA-04</td>
+<td>Resumen</td>
+<td>Ambiguo</td>
+<td>Calificaciones</td>
+</tr>
+<tr>
+<td>INF-11</td>
+<td>Historial</td>
+<td>No indica qué contiene</td>
+<td>Historial académico</td>
+</tr>
+</tbody>
+</table></div>
+<p>Estas etiquetas son <strong>candidatas a probar</strong>, no resultados definitivos. Tampoco es razonable eliminar una función únicamente por baja frecuencia: un trámite anual puede ser crítico. Las categorías pueden organizarse por objeto («Estudiantes»), tarea («Solicitudes»), etapa («Matrícula»), audiencia o tema. Mezclar criterios en el mismo nivel sin una lógica clara suele dificultar la orientación.</p>
+<p>La discusión de anchura y profundidad no se resuelve imponiendo «máximo siete opciones». La cantidad adecuada depende de diferenciación, relevancia, términos y estructura. Menos opciones no garantizan menos carga cognitiva si sus nombres son imprecisos.</p>
+<h2 id="3-8-rotulado-y-vocabulario">3.8. Rotulado y vocabulario</h2>
+<p>Los rótulos ayudan a anticipar destinos. «Procesos varios» comunica menos que «Solicitudes pendientes». Sin embargo, los términos «certificado», «constancia» y «comprobante» podrían designar documentos jurídicamente distintos; no deben tratarse como sinónimos sin comprobarlo. Puede mantenerse la denominación oficial y añadir una descripción comprensible o términos alternativos de búsqueda.</p>
+<p>En sistemas con instituciones distintas, guarda un <strong>identificador estable</strong> distinto de la etiqueta localizada. No utilices el texto mostrado para determinar permisos o integridad de datos.</p>
+<h2 id="3-9-card-sorting-investigar-agrupaciones">3.9. Card sorting: investigar agrupaciones</h2>
+<p>En <em>card sorting</em> se presentan tarjetas con contenidos y se observa cómo las personas los agrupan. Hay modalidad <strong>abierta</strong> (participantes crean grupos y nombres), <strong>cerrada</strong> (se proporcionan grupos) e <strong>híbrida</strong> [F05].</p>
+<p>Protocolo básico: definir pregunta; redactar tarjetas neutrales; reclutar por audiencia; observar agrupaciones y términos; registrar discrepancias; proponer estructuras; <strong>validar después encontrabilidad</strong>. Tarjetas ilustrativas: Constancia de matrícula, notas, horarios, recibos, justificar falta, asistencia, pagos, permiso de salida, historial académico, mensajes del docente.</p>
+<p>No confundas agrupar con navegar: que varias personas coloquen «constancia» con «matrícula» no demuestra que después la encontrarán correctamente en un menú real. La prueba complementaria es <em>tree testing</em>.</p>
+<h2 id="3-10-tree-testing-comprobar-donde-buscarian">3.10. Tree testing: comprobar dónde buscarían</h2>
+<p>Un <em>tree test</em> presenta la arquitectura en forma de árbol textual, sin decoración gráfica. Las personas reciben tareas realistas y seleccionan rutas; se analizan destino, primer clic, retrocesos y errores [F06].</p>
+<p><strong>Árbol A: clasificación institucional</strong></p>
+<div class="code-block"><button aria-label="Copiar fragmento de código" class="copy-code" type="button">Copiar código</button><pre><code class="language-text">Inicio
+├── Mi perfil
+├── Mis clases
+└── Trámites institucionales
+    └── Gestión documental
+        └── Certificaciones
+            └── Constancia de matrícula
+</code></pre></div>
+<p><strong>Árbol B: clasificación contextual</strong></p>
+<div class="code-block"><button aria-label="Copiar fragmento de código" class="copy-code" type="button">Copiar código</button><pre><code class="language-text">Inicio
+├── Estudiantes
+│   └── Estudiante seleccionado
+│       └── Documentos y constancias
+│           └── Constancia de matrícula
+├── Pagos
+└── Comunicaciones
+</code></pre></div>
+<p>Tarea neutral: «Necesitas un documento que demuestre que uno de tus hijos está inscrito este periodo. ¿Dónde intentarías encontrarlo?». No digas de antemano «entra a Documentos»; contaminaría la prueba.</p>
+<p><strong>Métricas:</strong> éxito final, éxito directo (sin retrocesos), primer clic, número de retrocesos, tiempo e interpretación cualitativa. Define <strong>antes</strong> del estudio los destinos aceptables. La ruta con menos clics no es necesariamente más clara. Abre el <a href="../recursos/c03_arboles.html">laboratorio interactivo del capítulo</a> para recorrer ambos árboles; no es un experimento con participantes reales.</p>
+<h2 id="3-11-mapa-de-sitio-task-flow-user-flow-journey-y-blueprint">3.11. Mapa de sitio, task flow, user flow, journey y blueprint</h2>
+<p>Estos artefactos representan aspectos distintos:</p>
+<div aria-label="Tabla desplazable horizontalmente" class="table-scroller" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th>Artefacto</th>
+<th>Qué representa</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mapa de sitio</td>
+<td>Destinos y relaciones jerárquicas</td>
+<td>Estudiantes → Documentos → Constancias.</td>
+</tr>
+<tr>
+<td>Task flow</td>
+<td>Pasos de una tarea concreta</td>
+<td>Elegir estudiante → comprobar → descargar.</td>
+</tr>
+<tr>
+<td>User flow</td>
+<td>Decisiones y bifurcaciones en producto</td>
+<td>Disponible / pendiente / acceso denegado.</td>
+</tr>
+<tr>
+<td>Journey map</td>
+<td>Experiencia completa, incluso fuera del sistema</td>
+<td>Recibir solicitud → obtener PDF → presentarlo.</td>
+</tr>
+<tr>
+<td>Service blueprint</td>
+<td>Operaciones visibles e internas</td>
+<td>Validar matrícula, generar, autorizar y servir documento.</td>
+</tr>
+</tbody>
+</table></div>
+<p>NN/G diferencia las vistas de recorrido general de la interacción específica con el sistema [F07]. No necesitas producir cinco diagramas para cada mejora; elige el artefacto que revele los riesgos relevantes.</p>
+<p>Ejemplo de <em>user flow</em>:</p>
+<div class="code-block"><button aria-label="Copiar fragmento de código" class="copy-code" type="button">Copiar código</button><pre><code class="language-text">Seleccionar estudiante
+        ↓
+Abrir documentos
+        ↓
+¿Constancia disponible?
+    /          \
+   Sí          No
+   ↓           ↓
+Revisar      Explicar motivo
+periodo      y alternativa
+   ↓
+Descargar
+   ↓
+Verificar archivo
+</code></pre></div>
+<p>Es distinto de un mapa de sitio: muestra estado y decisiones, no solo categorías.</p>
+<h2 id="3-12-priorizacion-multiples-vias-y-accesibilidad">3.12. Priorización, múltiples vías y accesibilidad</h2>
+<p>La prominencia de una función debe evaluarse con frecuencia, criticidad, urgencia, impacto del error y audiencia. Evita convertir una puntuación inventada en una «ley» de usabilidad. Cuando una función tiene varios contextos legítimos, pueden ofrecerse múltiples accesos al mismo recurso, conservando identidad y permisos.</p>
+<p>WCAG 2.2 (criterio 2.4.5, nivel AA) contempla <strong>más de una forma de localizar páginas</strong> dentro de conjuntos de páginas, con excepciones para pasos o resultados de un proceso. No exige duplicar menús idénticos [F08]. Encabezados claros, navegación consistente y regiones semánticas ayudan a orientarse a usuarios de teclado y lectores de pantalla [F09].</p>
+<p><strong>Ejemplo HTML con navegación semántica:</strong></p>
+<div class="code-block"><button aria-label="Copiar fragmento de código" class="copy-code" type="button">Copiar código</button><pre><code class="language-html">&lt;a href="#principal" class="skip-link"&gt;Saltar al contenido&lt;/a&gt;
+&lt;nav aria-label="Navegación del estudiante"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="/estudiante/inicio"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/estudiante/calificaciones"&gt;Calificaciones&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/estudiante/documentos" aria-current="page"&gt;
+      Documentos y constancias
+    &lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;main id="principal" tabindex="-1"&gt;
+  &lt;h1&gt;Documentos y constancias&lt;/h1&gt;
+&lt;/main&gt;
+</code></pre></div>
+<div class="code-block"><button aria-label="Copiar fragmento de código" class="copy-code" type="button">Copiar código</button><pre><code class="language-css">.skip-link { position: absolute; transform: translateY(-200%); }
+.skip-link:focus { transform: translateY(0); }
+nav a:focus-visible { outline: 3px solid #1d4ed8; outline-offset: 3px; }
+nav a[aria-current="page"] { font-weight: 700; text-decoration: underline; }
+</code></pre></div>
+<p>Usa <code>nav</code> y enlaces nativos en una navegación común; no agregues roles <code>menubar</code> o <code>menu</code> sin implementar los comportamientos complejos que exigen. El ejemplo <strong>no garantiza</strong> por sí solo todas las WCAG ni los permisos del servicio.</p>
+<h2 id="3-13-identificadores-de-destino-en-flutter">3.13. Identificadores de destino en Flutter</h2>
+<p>Separar la identidad del destino de su etiqueta ayuda a localizar el texto y cambiar rutas sin afectar lógica de permisos:</p>
+<div class="code-block"><button aria-label="Copiar fragmento de código" class="copy-code" type="button">Copiar código</button><pre><code class="language-dart">enum StudentDestination { grades, attendance, documents }
+
+class DestinationSpec {
+  const DestinationSpec(this.id, this.label);
+  final StudentDestination id;
+  final String label; // En producción: traducción con l10n.
+}
+
+const destinations = [
+  DestinationSpec(StudentDestination.grades, 'Calificaciones'),
+  DestinationSpec(StudentDestination.attendance, 'Asistencia'),
+  DestinationSpec(StudentDestination.documents, 'Documentos y constancias'),
+];
+</code></pre></div>
+<p>Este fragmento ilustra una estructura de datos. No es una aplicación completa ni código ejecutado; debe integrarse con navegación, autorización, estados y semántica, que se profundizarán en los capítulos 21 y 35.</p>
+<h2 id="3-14-metodo-de-trabajo-recomendado">3.14. Método de trabajo recomendado</h2>
+<ol>
+<li>Precisar objetivo y público; no empezar por rediseñar un menú.</li>
+<li>Recuperar evidencia de entrevistas, observación y analítica (capítulo 02).</li>
+<li>Inventariar contenido, permisos, vigencia y términos.</li>
+<li>Modelar tareas, errores y rutas alternativas.</li>
+<li>Investigar expectativas y agrupaciones, cuando sea necesario.</li>
+<li>Proponer una o varias arquitecturas candidatas.</li>
+<li>Evaluar con tree testing y tareas realistas.</li>
+<li>Prototipar y comprobar flujos, accesibilidad y estados.</li>
+<li>Implementar sin romper permisos, enlaces ni registros anteriores.</li>
+<li>Documentar decisiones, excepciones y fecha de revisión.</li>
+</ol>
+<p>No es un proceso estrictamente lineal: los resultados de una prueba pueden devolvernos a investigación o a taxonomía.</p>
+<h2 id="3-15-antipatrones">3.15. Antipatrones</h2>
+<div aria-label="Tabla desplazable horizontalmente" class="table-scroller" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th>Error</th>
+<th>Por qué perjudica</th>
+<th>Alternativa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Organizar por tablas de base de datos</td>
+<td>Impone estructura técnica</td>
+<td>Agrupar según tareas y expectativas.</td>
+</tr>
+<tr>
+<td>Resolver cada queja con un botón</td>
+<td>Añade ruido sin diagnosticar</td>
+<td>Verificar causa del fallo.</td>
+</tr>
+<tr>
+<td>Creer que solo hay una ruta posible</td>
+<td>Ignora contextos distintos</td>
+<td>Múltiples puntos de entrada razonables.</td>
+</tr>
+<tr>
+<td>Fijar siete opciones como máximo</td>
+<td>Regla universal infundada</td>
+<td>Probar comprensión y encontrabilidad.</td>
+</tr>
+<tr>
+<td>Dar por buena IA tras card sorting</td>
+<td>Agrupar no es encontrar</td>
+<td>Complementar con tree testing.</td>
+</tr>
+<tr>
+<td>Medir solo tiempo</td>
+<td>Oculta errores y estrategias</td>
+<td>Éxito, retrocesos y observación.</td>
+</tr>
+<tr>
+<td>Ocultar enlaces para aplicar permisos</td>
+<td>La UI no protege el backend</td>
+<td>Autorizar en servidor.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="3-16-ejercicios-rubrica-y-checklist">3.16. Ejercicios, rúbrica y checklist</h2>
+<p><strong>Ejercicio A.</strong> Escribe una necesidad, un objetivo y tres tareas para justificar una inasistencia. No uses nombres de botones como necesidades.</p>
+<p><strong>Ejercicio B.</strong> Modela un HTA para consultar un historial académico con varios periodos. Incluye errores, autorizaciones y estados.</p>
+<p><strong>Ejercicio C.</strong> Diseña diez tarjetas para investigar cómo se agrupan documentos de estudiantes. Especifica si harás clasificación abierta o cerrada y por qué.</p>
+<p><strong>Ejercicio D.</strong> Compara los dos árboles del laboratorio. Define previamente qué destinos se consideran correctos y registra primer clic, retrocesos y resultado. No generalices a partir de tu propia participación.</p>
+<p><strong>Ejercicio E.</strong> Implementa la navegación HTML de la sección anterior con foco visible, ruta actual y enlaces reales; comprueba que los permisos no dependan del menú.</p>
+<p><strong>Checklist de revisión:</strong></p>
+<ul>
+<li>[ ] La necesidad describe un resultado, no un widget.</li>
+<li>[ ] Las tareas distinguen operación, decisión y error.</li>
+<li>[ ] Se identifican actores y sus modelos mentales.</li>
+<li>[ ] Existe un inventario y una taxonomía argumentada.</li>
+<li>[ ] Los rótulos son comprensibles y precisos.</li>
+<li>[ ] Las rutas alternativas no duplican datos.</li>
+<li>[ ] Hay un protocolo de prueba con destinos definidos de antemano.</li>
+<li>[ ] Se evalúan éxito, primeros clics, retrocesos y accesibilidad.</li>
+<li>[ ] Las decisiones se etiquetan como probadas o hipotéticas.</li>
+</ul>
+<p><strong>Conclusión:</strong> la arquitectura de información no consiste en acomodar enlaces de forma atractiva. Consiste en hacer que el modelo de contenido y las rutas disponibles permitan a distintas personas encontrar información y completar objetivos, con evidencia y sin sacrificar seguridad, accesibilidad ni coherencia.</p>
+<h2 id="3-17-fuentes-y-lectura-complementaria">3.17. Fuentes y lectura complementaria</h2>
+<ul>
+<li>[F01] GOV.UK Service Manual. <em>Start by learning user needs</em>. <a href="https://www.gov.uk/service-manual/user-research/start-by-learning-user-needs" rel="noopener noreferrer" target="_blank">https://www.gov.uk/service-manual/user-research/start-by-learning-user-needs</a></li>
+<li>[F02] Nielsen Norman Group. <em>Task Analysis: Support Users in Achieving Their Goals</em>. <a href="https://www.nngroup.com/articles/task-analysis/" rel="noopener noreferrer" target="_blank">https://www.nngroup.com/articles/task-analysis/</a></li>
+<li>[F03] Nielsen Norman Group. <em>Mental Models</em>. <a href="https://www.nngroup.com/articles/mental-models/" rel="noopener noreferrer" target="_blank">https://www.nngroup.com/articles/mental-models/</a></li>
+<li>[F04] Nielsen Norman Group. <em>Information Architecture: Study Guide</em>. <a href="https://www.nngroup.com/articles/ia-study-guide/" rel="noopener noreferrer" target="_blank">https://www.nngroup.com/articles/ia-study-guide/</a></li>
+<li>[F05] Nielsen Norman Group. <em>Card Sorting: Uncover Users’ Mental Models</em>. <a href="https://www.nngroup.com/articles/card-sorting-definition/" rel="noopener noreferrer" target="_blank">https://www.nngroup.com/articles/card-sorting-definition/</a></li>
+<li>[F06] Nielsen Norman Group. <em>Tree Testing</em>. <a href="https://www.nngroup.com/articles/tree-testing/" rel="noopener noreferrer" target="_blank">https://www.nngroup.com/articles/tree-testing/</a></li>
+<li>[F07] Nielsen Norman Group. <em>User Journeys vs. User Flows</em>. <a href="https://www.nngroup.com/articles/user-journeys-vs-user-flows/" rel="noopener noreferrer" target="_blank">https://www.nngroup.com/articles/user-journeys-vs-user-flows/</a></li>
+<li>[F08] W3C. <em>WCAG 2.2 — 2.4.5 Multiple Ways</em>. <a href="https://www.w3.org/WAI/WCAG22/quickref/#multiple-ways" rel="noopener noreferrer" target="_blank">https://www.w3.org/WAI/WCAG22/quickref/#multiple-ways</a></li>
+<li>[F09] W3C WAI. <em>Menus Tutorial — Structure</em>. <a href="https://www.w3.org/WAI/tutorials/menus/structure/" rel="noopener noreferrer" target="_blank">https://www.w3.org/WAI/tutorials/menus/structure/</a></li>
+<li>[F10] GOV.UK Service Manual. <em>Map a user's whole problem</em>. <a href="https://www.gov.uk/service-manual/design/map-a-users-whole-problem" rel="noopener noreferrer" target="_blank">https://www.gov.uk/service-manual/design/map-a-users-whole-problem</a></li>
+</ul>
+<p><em>Fin del Capítulo 03. Los casos, árboles y posibles hallazgos son ilustrativos; deben validarse antes de implementarse.</em></p>
+</article><div class="end-note"><span class="eyebrow">SIGUIENTE PASO</span><div class="next-link disabled"><span>Próximamente</span><strong>04. Psicología cognitiva y leyes aplicadas</strong></div></div><footer class="reader-footer">Manual UI/UX · Versión de trabajo 0.3 · 3 de 36 capítulos disponibles</footer></main>
+<aside class="reader-outline" aria-label="En esta página"><div class="outline-inner"><div class="outline-heading">EN ESTA PÁGINA</div><nav><a class="outline-item level-2" href="#3-1-proposito-y-objetivos">3.1. Propósito y objetivos</a><a class="outline-item level-2" href="#3-2-necesidades-objetivos-tareas-operaciones-y-funcionalidades">3.2. Necesidades, objetivos, tareas, operaciones y funcionalidades</a><a class="outline-item level-2" href="#3-3-contexto-y-escenarios">3.3. Contexto y escenarios</a><a class="outline-item level-2" href="#3-4-analisis-de-tareas-y-hta">3.4. Análisis de tareas y HTA</a><a class="outline-item level-2" href="#3-5-modelos-mentales-y-expectativas">3.5. Modelos mentales y expectativas</a><a class="outline-item level-2" href="#3-6-que-comprende-la-arquitectura-de-informacion">3.6. Qué comprende la arquitectura de información</a><a class="outline-item level-2" href="#3-7-inventario-auditoria-y-taxonomia">3.7. Inventario, auditoría y taxonomía</a><a class="outline-item level-2" href="#3-8-rotulado-y-vocabulario">3.8. Rotulado y vocabulario</a><a class="outline-item level-2" href="#3-9-card-sorting-investigar-agrupaciones">3.9. Card sorting: investigar agrupaciones</a><a class="outline-item level-2" href="#3-10-tree-testing-comprobar-donde-buscarian">3.10. Tree testing: comprobar dónde buscarían</a><a class="outline-item level-2" href="#3-11-mapa-de-sitio-task-flow-user-flow-journey-y-blueprint">3.11. Mapa de sitio, task flow, user flow, journey y blueprint</a><a class="outline-item level-2" href="#3-12-priorizacion-multiples-vias-y-accesibilidad">3.12. Priorización, múltiples vías y accesibilidad</a><a class="outline-item level-2" href="#3-13-identificadores-de-destino-en-flutter">3.13. Identificadores de destino en Flutter</a><a class="outline-item level-2" href="#3-14-metodo-de-trabajo-recomendado">3.14. Método de trabajo recomendado</a><a class="outline-item level-2" href="#3-15-antipatrones">3.15. Antipatrones</a><a class="outline-item level-2" href="#3-16-ejercicios-rubrica-y-checklist">3.16. Ejercicios, rúbrica y checklist</a><a class="outline-item level-2" href="#3-17-fuentes-y-lectura-complementaria">3.17. Fuentes y lectura complementaria</a></nav><div class="outline-download"><p>¿Prefieres leer sin conexión?</p><a href="../pdf/capitulo-03.pdf" download>Descargar PDF ↗</a></div></div></aside></div><div class="overlay" id="nav-overlay"></div><script src="../assets/site.js" defer></script></body></html>

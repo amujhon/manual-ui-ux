@@ -1,0 +1,13 @@
+tarea,dispositivo,resultado,duracion_ms
+constancia,movil,completada,82000
+constancia,movil,fallida,131000
+constancia,web,completada,53000
+constancia,movil,completada,71000
+constancia,web,abandonada,111000
+constancia,movil,fallida,76000
+constancia,web,completada,66000
+constancia,movil,completada,94000
+constancia,web,completada,57000
+constancia,movil,abandonada,120000
+constancia,web,completada,62000
+constancia,movil,completada,87000
